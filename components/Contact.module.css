@@ -1,0 +1,123 @@
+.section {
+  padding: clamp(72px, 10vw, 140px) 0;
+}
+
+.grid {
+  display: grid;
+  gap: 56px;
+  align-items: center;
+}
+
+.h2 {
+  margin-top: 14px;
+  font-size: clamp(2rem, 5.2vw, 3.6rem);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.lead {
+  margin-top: 18px;
+  max-width: 44ch;
+  color: var(--slate);
+}
+
+.address {
+  margin-top: 32px;
+  font-style: normal;
+  font-size: 1.15rem;
+  line-height: 1.55;
+}
+
+.links {
+  display: grid;
+  gap: 4px;
+  margin-top: 24px;
+}
+
+.links a {
+  display: inline-block;
+  padding: 8px 0;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid var(--gold);
+  transition: color 0.25s;
+}
+
+.links a:hover {
+  color: var(--gold-deep);
+}
+
+.links li {
+  justify-self: start;
+}
+
+.window {
+  overflow: hidden;
+  aspect-ratio: 4 / 3.4;
+  border-radius: clamp(90px, 22vw, 280px) clamp(90px, 22vw, 280px) 0 0;
+  background: var(--plaster-2);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 60%;
+}
+
+.caption {
+  margin-top: 18px;
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+@media (min-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr 1.05fr;
+    gap: 88px;
+  }
+}
+
+/* Pied de page */
+.footer {
+  position: relative;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--plaster);
+  padding: clamp(56px, 8vw, 96px) 0 40px;
+}
+
+.bigMark {
+  position: absolute;
+  right: -12%;
+  top: 50%;
+  width: min(620px, 90vw);
+  margin-top: calc(min(620px, 90vw) / -2);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.footInner {
+  position: relative;
+}
+
+.logo {
+  width: clamp(150px, 22vw, 220px);
+}
+
+.tag {
+  margin-top: 22px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.4rem, 3.4vw, 1.9rem);
+}
+
+.legal {
+  margin-top: 56px;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: rgb(242 241 237 / 0.6);
+}

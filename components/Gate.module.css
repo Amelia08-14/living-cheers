@@ -1,0 +1,57 @@
+.gate {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  animation: gone 0s linear 2.9s forwards;
+}
+
+.slats {
+  display: flex;
+  height: 100%;
+}
+
+.slat {
+  flex: 1;
+  background: var(--ink);
+  box-shadow: 0 0 0 1px var(--ink);
+  transform-origin: top;
+  animation: open 0.95s var(--ease) calc(1.35s + var(--i) * 70ms) forwards;
+}
+
+.slat:nth-child(even) {
+  transform-origin: bottom;
+}
+
+.mark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(34vw, 190px);
+  margin: calc(min(34vw, 190px) / -2) 0 0 calc(min(34vw, 190px) / -2);
+  animation: fade 0.45s ease 1.15s forwards;
+}
+
+@keyframes open {
+  to {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes gone {
+  to {
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gate {
+    display: none;
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+tmp
+*.log
+.env*.local
+next-env.d.ts
+*.tsbuildinfo
+assets-src

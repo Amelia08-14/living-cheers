@@ -1,0 +1,249 @@
+.header {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px var(--gutter);
+}
+
+.brand img {
+  width: clamp(104px, 14vw, 150px);
+}
+
+.tel {
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  padding: 10px 2px;
+  border-bottom: 1px solid var(--gold);
+  transition: color 0.25s;
+}
+
+.tel:hover {
+  color: var(--gold-deep);
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  gap: 40px;
+  align-items: center;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  min-height: 100svh;
+  padding: 118px var(--gutter) 64px;
+}
+
+/* Entrée en scène, déclenchée après l'ouverture de la grille. */
+.rise {
+  animation: rise 1.1s var(--ease-out) var(--d, 0s) backwards;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+}
+
+.copy {
+  display: grid;
+  justify-items: start;
+}
+
+.title {
+  display: grid;
+  margin-top: 18px;
+  text-transform: uppercase;
+  line-height: 0.96;
+  font-size: clamp(2.2rem, 9.5vw, 4.4rem);
+}
+
+.thin {
+  font-weight: 200;
+  letter-spacing: 0.04em;
+  color: var(--slate);
+}
+
+.bold {
+  font-weight: 700;
+  letter-spacing: 0.015em;
+}
+
+.tagline {
+  margin-top: 26px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.55rem, 4.6vw, 2.3rem);
+  line-height: 1.15;
+}
+
+.note {
+  margin-top: 18px;
+  max-width: 34ch;
+  color: var(--slate);
+}
+
+.words {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.primary,
+.ghost {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 28px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--ink);
+  transition:
+    background 0.3s,
+    color 0.3s,
+    border-color 0.3s;
+}
+
+.primary {
+  background: var(--ink);
+  color: var(--plaster);
+}
+
+.primary:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+}
+
+.ghost:hover {
+  background: var(--ink);
+  color: var(--plaster);
+}
+
+/* Visuel en arche */
+.visual {
+  position: relative;
+  width: min(100%, 520px);
+  justify-self: center;
+}
+
+.arch {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 999px 999px 0 0;
+  background: var(--plaster-2);
+}
+
+.outline {
+  position: absolute;
+  inset: 0;
+  transform: translate(16px, 16px);
+  border: 1.5px solid var(--gold);
+  border-radius: 999px 999px 0 0;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: cycle 18s ease-in-out infinite;
+}
+
+.slide:nth-child(1) {
+  z-index: 3;
+  object-position: 52% 50%;
+  animation-delay: 2.2s;
+}
+
+.slide:nth-child(2) {
+  z-index: 2;
+  object-position: 30% 50%;
+  animation-delay: 8.2s;
+}
+
+.slide:nth-child(3) {
+  z-index: 1;
+  object-position: 52% 50%;
+  animation-delay: 14.2s;
+}
+
+@keyframes cycle {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  8% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  41% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.caption {
+  margin-top: 28px;
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+@media (min-width: 1000px) {
+  .hero {
+    grid-template-columns: 1.15fr 1fr;
+    gap: 56px;
+    padding-top: 100px;
+  }
+
+  .title {
+    font-size: clamp(2.6rem, 4.6vw, 4.8rem);
+  }
+
+  .visual {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 999px) {
+  .hero {
+    padding-top: 108px;
+  }
+
+  .visual {
+    margin-top: 12px;
+    margin-right: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide:nth-child(n + 2) {
+    display: none;
+  }
+}
