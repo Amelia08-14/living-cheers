@@ -1,0 +1,10 @@
+:HL["/_next/static/chunks/1rt4uszfzfxsl.css","style"]
+:HC["/",""]
+:HL["/_next/static/chunks/10vqchems9sli.css","style"]
+:HL["/images/logo-ink.png","image"]
+:HL["/images/render-arches-1400.webp","image",{"imageSrcSet":"/images/render-arches-700.webp 700w, /images/render-arches-1400.webp 1400w","imageSizes":"(min-width: 1000px) 40vw, 80vw"}]
+:HL["/images/render-recliners-1400.webp","image",{"imageSrcSet":"/images/render-recliners-700.webp 700w, /images/render-recliners-1400.webp 1400w","imageSizes":"(min-width: 1000px) 40vw, 80vw"}]
+:HL["/images/render-massage-1400.webp","image",{"imageSrcSet":"/images/render-massage-700.webp 700w, /images/render-massage-1400.webp 1400w","imageSizes":"(min-width: 1000px) 40vw, 80vw"}]
+:HL["/images/logo-light.png","image"]
+1:[["children",{"s":"__PAGE__","h":160}]]
+0:{"b":"WUxMVu-6ldCZYnKIXz1tV","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

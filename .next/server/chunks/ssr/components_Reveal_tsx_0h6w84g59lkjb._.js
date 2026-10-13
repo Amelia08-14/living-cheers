@@ -1,0 +1,3 @@
+module.exports=[88457,a=>{"use strict";var b=a.i(87924),c=a.i(72131);a.s(["default",0,function({children:a,className:d,delay:e=0}){let f=(0,c.useRef)(null);return(0,c.useEffect)(()=>{let a=f.current;if(!a||window.matchMedia("(prefers-reduced-motion: reduce)").matches||a.getBoundingClientRect().top<.92*window.innerHeight)return;a.dataset.reveal="hidden";let b=new IntersectionObserver(([c])=>{c.isIntersecting&&(a.dataset.reveal="shown",b.disconnect())},{threshold:.12,rootMargin:"0px 0px -6% 0px"});return b.observe(a),()=>b.disconnect()},[]),(0,b.jsx)("div",{ref:f,className:d,style:{"--delay":`${e}s`},children:a})}])}];
+
+//# sourceMappingURL=components_Reveal_tsx_0h6w84g59lkjb._.js.map
