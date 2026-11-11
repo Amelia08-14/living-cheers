@@ -1,17 +1,19 @@
 .header {
   z-index: 5;
-  max-width: var(--maxw);
-  margin-inline: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  max-width: var(--maxw);
+  margin-inline: auto;
   padding: 22px var(--gutter);
 }
 
+/* Par-dessus une photo : transparent, texte blanc. */
 .overlay {
   position: absolute;
   inset: 0 0 auto 0;
+  color: #fff;
 }
 
 .bar {
@@ -23,19 +25,19 @@
 }
 
 .brand img {
-  width: clamp(96px, 14vw, 150px);
+  width: clamp(96px, 12vw, 140px);
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: clamp(16px, 3vw, 36px);
+  gap: clamp(20px, 5vw, 72px);
 }
 
 .link {
   position: relative;
   padding: 10px 0;
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -70,13 +72,21 @@
   transition: color 0.25s;
 }
 
-.tel:hover {
+.bar .tel:hover {
   color: var(--gold-deep);
 }
 
-@media (max-width: 560px) {
+.overlay .tel:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 760px) {
   .wide {
     display: none;
+  }
+
+  .nav {
+    margin-left: auto;
   }
 
   .tel {

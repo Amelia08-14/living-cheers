@@ -159,39 +159,126 @@
   color: var(--ink);
 }
 
-/* ---------- Page pays ---------- */
+/* ---------- Page pays : bandeau plein écran ---------- */
 
-.countryHero {
-  display: grid;
-  gap: 56px;
-  align-items: center;
-  padding-top: clamp(32px, 5vw, 64px);
-  padding-bottom: clamp(56px, 8vw, 110px);
+.banner {
+  position: relative;
+  display: flex;
+  min-height: min(88svh, 820px);
+  overflow: hidden;
+  background: var(--ink);
+  color: #fff;
 }
 
-.brandTitle {
-  margin-top: 16px;
-  font-size: clamp(3rem, 10vw, 6.4rem);
+.bannerImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 62%;
+  animation: settle 2.4s var(--ease-out) both;
+}
+
+@keyframes settle {
+  from {
+    transform: scale(1.08);
+  }
+}
+
+.bannerShade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgb(21 23 26 / 0.45) 0%, rgb(21 23 26 / 0) 26%),
+    linear-gradient(0deg, rgb(21 23 26 / 0.62) 0%, rgb(21 23 26 / 0.1) 58%),
+    linear-gradient(90deg, rgb(21 23 26 / 0.35) 0%, rgb(21 23 26 / 0) 70%);
+}
+
+.bannerInner {
+  position: relative;
+  align-self: flex-end;
+  padding-top: 140px;
+  padding-bottom: clamp(40px, 6vw, 72px);
+}
+
+.crumbsLight {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.75);
+}
+
+.crumbsLight a {
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.crumbsLight a:hover {
+  color: #fff;
+}
+
+.crumbsLight span[aria-hidden] {
+  color: var(--gold);
+}
+
+.crumbsLight [aria-current] {
+  color: #fff;
+}
+
+.bannerEyebrow {
+  margin-top: clamp(28px, 5vw, 56px);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.bannerTitle {
+  margin-top: 10px;
+  margin-left: -0.05em;
+  font-size: clamp(3.4rem, 13vw, 11rem);
   font-weight: 200;
-  line-height: 0.92;
-  letter-spacing: -0.02em;
+  line-height: 0.88;
+  letter-spacing: -0.035em;
   text-transform: uppercase;
 }
 
-.body {
+.bannerTagline {
   margin-top: 18px;
-  max-width: 52ch;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  line-height: 1.1;
+}
+
+.countryIntro {
+  display: grid;
+  gap: 40px;
+  padding-top: clamp(56px, 8vw, 104px);
+}
+
+.introText {
+  display: grid;
+  gap: 16px;
+  max-width: 56ch;
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
   color: var(--slate);
 }
 
-.tagline + .body {
-  margin-top: 28px;
+.introText p:first-child {
+  color: var(--ink);
 }
 
 .facts {
   display: grid;
   gap: 22px;
-  margin: 40px 0 0;
+  margin: 0;
   padding-top: 28px;
   border-top: 1px solid var(--plaster-2);
 }
@@ -215,42 +302,21 @@
   }
 }
 
-.countryVisual {
-  position: relative;
-  width: min(100% - 16px, 460px);
-  justify-self: center;
-}
-
-.arch {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 4 / 5;
-  border-radius: 999px 999px 0 0;
-  background: var(--plaster-2);
-}
-
-.arch img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.outline {
-  position: absolute;
-  inset: 0;
-  transform: translate(16px, 16px);
-  border: 1.5px solid var(--gold);
-  border-radius: 999px 999px 0 0;
-}
-
 @media (min-width: 1000px) {
-  .countryHero {
-    grid-template-columns: 1.15fr 0.85fr;
+  .countryIntro {
+    grid-template-columns: 1.1fr 1fr;
     gap: 80px;
+    align-items: end;
   }
 
-  .countryVisual {
-    justify-self: end;
+  .facts {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .facts > div {
+    padding-left: 20px;
+    border-left: 1px solid var(--gold);
   }
 }
 

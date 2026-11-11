@@ -11,7 +11,8 @@
     "build": "next build",
     "start": "node server.js",
     "images": "node scripts/build-images.mjs",
-    "catalogue": "node scripts/fetch-catalogue.mjs"
+    "catalogue": "node scripts/fetch-catalogue.mjs",
+    "hero": "node scripts/build-hero.mjs"
   },
   "dependencies": {
     "@fontsource-variable/jost": "^5.3.0",

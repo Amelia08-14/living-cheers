@@ -1,10 +1,7 @@
 :HL["/_next/static/chunks/1rt4uszfzfxsl.css","style"]
 :HC["/",""]
-:HL["/_next/static/chunks/3n0sro7vupzar.css","style"]
-:HL["/images/logo-ink.png","image"]
-:HL["/images/render-arches-1400.webp","image",{"imageSrcSet":"/images/render-arches-700.webp 700w, /images/render-arches-1400.webp 1400w","imageSizes":"(min-width: 1000px) 40vw, 80vw"}]
-:HL["/images/render-recliners-1400.webp","image",{"imageSrcSet":"/images/render-recliners-700.webp 700w, /images/render-recliners-1400.webp 1400w","imageSizes":"(min-width: 1000px) 40vw, 80vw"}]
-:HL["/images/render-massage-1400.webp","image",{"imageSrcSet":"/images/render-massage-700.webp 700w, /images/render-massage-1400.webp 1400w","imageSizes":"(min-width: 1000px) 40vw, 80vw"}]
+:HL["/_next/static/chunks/3uw9pe_cd9tl0.css","style"]
+:HL["/images/hero/accueil-1-1920.webp","image",{"imageSrcSet":"/images/hero/accueil-1-960.webp 960w, /images/hero/accueil-1-1920.webp 1536w","imageSizes":"100vw","fetchPriority":"high"}]
 :HL["/images/logo-light.png","image"]
 1:[["children",{"s":"__PAGE__","h":160}]]
-0:{"b":"t4ZLpBYtjrcHtQzSKb5FW","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"Rf2bCQXwiwGcN95H_04g1","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
