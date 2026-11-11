@@ -7,3 +7,4 @@ tmp
 next-env.d.ts
 *.tsbuildinfo
 assets-src
+.next/server/route-cache
