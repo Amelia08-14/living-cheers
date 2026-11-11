@@ -1,6 +1,8 @@
 import type { CSSProperties } from 'react';
+import Link from 'next/link';
 import Pic from './Pic';
 import SiteHeader from './SiteHeader';
+import { COUNTRIES } from '@/lib/catalogue';
 import { SITE } from '@/lib/site';
 import styles from './Hero.module.css';
 
@@ -18,27 +20,31 @@ export default function Hero() {
           </p>
           <h1 className={styles.title}>
             <span className={`${styles.thin} ${styles.rise}`} style={delay(2)}>
-              Site en
+              Le confort
             </span>
             <span className={`${styles.bold} ${styles.rise}`} style={delay(2.12)}>
-              construction
+              européen
             </span>
           </h1>
           <p className={`${styles.tagline} ${styles.rise}`} style={delay(2.3)}>
             {SITE.tagline}
           </p>
           <p className={`${styles.note} ${styles.rise}`} style={delay(2.35)}>
-            Notre site est en cours de réalisation. Revenez bientôt !
+            Canapés relax, literie et fauteuils massants choisis en Europe, à essayer dans notre salon d’exposition.
           </p>
-          <p className={`${styles.words} ${styles.rise}`} style={delay(2.4)}>
-            Meubles · Salons · Confort
-          </p>
+          <ul className={`${styles.words} ${styles.rise}`} style={delay(2.4)} aria-label="Collections par pays">
+            {COUNTRIES.map((c) => (
+              <li key={c.slug}>
+                <Link href={`/catalogue/${c.slug}`}>{c.name}</Link>
+              </li>
+            ))}
+          </ul>
           <div className={`${styles.actions} ${styles.rise}`} style={delay(2.55)}>
-            <a className={styles.primary} href={`mailto:${SITE.email}`}>
-              Nous écrire
-            </a>
-            <a className={styles.ghost} href={SITE.phoneHref}>
-              Appeler
+            <Link className={styles.primary} href="/catalogue">
+              Voir le catalogue
+            </Link>
+            <a className={styles.ghost} href="#contact">
+              Nous trouver
             </a>
           </div>
         </div>

@@ -1,5 +1,7 @@
 .header {
   z-index: 5;
+  max-width: var(--maxw);
+  margin-inline: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,8 +16,6 @@
 
 .bar {
   position: relative;
-  max-width: var(--maxw);
-  margin-inline: auto;
 }
 
 .brand {

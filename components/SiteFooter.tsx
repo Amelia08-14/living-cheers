@@ -21,7 +21,7 @@ export default function SiteFooter() {
               {COUNTRIES.map((c) => (
                 <li key={c.slug}>
                   <Link href={`/catalogue/${c.slug}`}>
-                    {c.name} <span>· {c.brand}</span>
+                    {c.name} <span>· {c.specialty}</span>
                   </Link>
                 </li>
               ))}

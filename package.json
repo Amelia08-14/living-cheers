@@ -2,7 +2,7 @@
   "name": "living-cheers",
   "version": "0.1.0",
   "private": true,
-  "description": "Site Living Cheers — page « site en construction »",
+  "description": "Site Living Cheers — catalogue par pays",
   "engines": {
     "node": ">=20.9.0"
   },

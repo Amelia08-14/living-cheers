@@ -1,5 +1,5 @@
-// Télécharge les photos produits des marques (voir scripts/catalogue-sources.json),
-// les convertit en WebP (640 et 1280 px) dans public/catalogue/<marque>/
+// Télécharge les photos produits des fournisseurs (voir scripts/catalogue-sources.json),
+// les convertit en WebP (640 et 1280 px) dans public/catalogue/<pays>/
 // et écrit lib/catalogue-images.json (dimensions, pour éviter les sauts de mise en page).
 // À relancer seulement si le catalogue change :
 //   npm run catalogue
@@ -27,13 +27,13 @@ async function download(url, file) {
   throw new Error(`Échec du téléchargement : ${url}`);
 }
 
-async function processProduct({ brand, slug, images }) {
-  await mkdir(`${SRC}/${brand}`, { recursive: true });
-  await mkdir(`${OUT}/${brand}`, { recursive: true });
+async function processProduct({ country, slug, images }) {
+  await mkdir(`${SRC}/${country}`, { recursive: true });
+  await mkdir(`${OUT}/${country}`, { recursive: true });
   const list = [];
   for (const [i, url] of images.entries()) {
     const n = i + 1;
-    const buf = await download(url, `${SRC}/${brand}/${slug}-${n}`);
+    const buf = await download(url, `${SRC}/${country}/${slug}-${n}`);
     // Fond blanc sous les PNG transparents.
     const base = sharp(buf).rotate().flatten({ background: '#ffffff' });
     let size;
@@ -42,16 +42,16 @@ async function processProduct({ brand, slug, images }) {
         .clone()
         .resize({ width: w, withoutEnlargement: true })
         .webp({ quality: 76 })
-        .toFile(`${OUT}/${brand}/${slug}-${n}-${w}.webp`);
+        .toFile(`${OUT}/${country}/${slug}-${n}-${w}.webp`);
       if (w === 1280) size = [info.width, info.height];
     }
     list.push(size);
   }
-  manifest[`${brand}/${slug}`] = list;
-  console.log(`${brand}/${slug} : ${list.length} photo(s)`);
+  manifest[`${country}/${slug}`] = list;
+  console.log(`${country}/${slug} : ${list.length} photo(s)`);
 }
 
-// Quelques produits à la fois, pour ne pas surcharger les serveurs des marques.
+// Quelques produits à la fois, pour ne pas surcharger les serveurs des fournisseurs.
 const queue = [...sources];
 await Promise.all(
   Array.from({ length: 4 }, async () => {

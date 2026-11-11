@@ -11,7 +11,7 @@ import styles from './catalogue.module.css';
 export const metadata: Metadata = {
   title: 'Catalogue par pays',
   description:
-    'Le catalogue Living Cheers : canapés Cheers (Portugal), literie Swiss Forme (Suisse) et fauteuils massants KingPur (Belgique).',
+    'Le catalogue Living Cheers par pays : canapés et fauteuils du Portugal, literie de Suisse et fauteuils massants de Belgique.',
   alternates: { canonical: '/catalogue' },
 };
 
@@ -26,8 +26,8 @@ export default function CataloguePage() {
             Trois pays, <em>trois savoir-faire.</em>
           </h1>
           <p className={styles.lead}>
-            Living Cheers réunit trois marques européennes : les canapés relax du Portugal, la literie suisse et les
-            fauteuils massants de Belgique. Choisissez un pays pour parcourir sa collection.
+            Living Cheers réunit des collections venues de trois pays d’Europe : les canapés relax du Portugal, la
+            literie suisse et les fauteuils massants de Belgique. Choisissez un pays pour parcourir sa collection.
           </p>
         </section>
 
@@ -52,10 +52,10 @@ export default function CataloguePage() {
                 <Reveal className={styles.previewHead}>
                   <div>
                     <p className="eyebrow">
-                      {c.code} · {c.name}
+                      {c.code} · {c.specialty}
                     </p>
                     <h2 id={`apercu-${c.slug}`} className={styles.h2}>
-                      {c.brand}
+                      {c.name}
                     </h2>
                     <p className={styles.tagline}>{c.tagline}</p>
                   </div>

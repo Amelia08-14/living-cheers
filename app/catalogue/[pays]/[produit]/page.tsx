@@ -23,8 +23,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { country, product } = found;
   const [img] = productImages(country, product);
   return {
-    title: `${product.name} · ${country.brand}`,
-    description: `${product.name} de ${country.brand} (${country.name}). ${product.summary}`,
+    title: `${product.name} · Collection ${country.name}`,
+    description: `${product.name}, collection ${country.name}. ${product.summary}`,
     alternates: { canonical: `/catalogue/${country.slug}/${product.slug}` },
     openGraph: img ? { images: [{ url: img.src, width: img.width, height: img.height }] } : undefined,
   };
@@ -65,7 +65,8 @@ export default async function ProductPage({ params }: Params) {
 
           <div className={styles.info}>
             <p className="eyebrow">
-              {country.brand} · {country.name}
+              {country.name}
+              {category ? ` · ${category.title}` : ''}
             </p>
             <h1 className={styles.productTitle}>{product.name}</h1>
             <p className={styles.summaryLine}>{product.summary}</p>
@@ -99,7 +100,7 @@ export default async function ProductPage({ params }: Params) {
             )}
 
             <p className={styles.origin}>
-              Marque {country.brand} · {country.place}
+              Collection {country.name} · {country.specialty}
             </p>
           </div>
         </article>
@@ -112,7 +113,7 @@ export default async function ProductPage({ params }: Params) {
                   Dans la même collection
                 </h2>
                 <Link href={`/catalogue/${country.slug}`} className={styles.all}>
-                  Tout {country.brand} <span aria-hidden="true">→</span>
+                  Toute la collection <span aria-hidden="true">→</span>
                 </Link>
               </div>
               <ul className={styles.grid} data-fit={country.frame.fit}>

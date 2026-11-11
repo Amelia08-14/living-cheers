@@ -1,10 +1,10 @@
 :HL["/_next/static/chunks/1rt4uszfzfxsl.css","style"]
 :HC["/",""]
-:HL["/_next/static/chunks/0sozl3gelk7n7.css","style"]
+:HL["/_next/static/chunks/3n0sro7vupzar.css","style"]
 :HL["/images/logo-ink.png","image"]
-:HL["/catalogue/cheers/meridienne-51698-1-1280.webp","image",{"imageSrcSet":"/catalogue/cheers/meridienne-51698-1-640.webp 640w, /catalogue/cheers/meridienne-51698-1-1280.webp 1280w","imageSizes":"(min-width: 1000px) 36vw, 80vw","fetchPriority":"high"}]
+:HL["/catalogue/portugal/meridienne-51698-1-1280.webp","image",{"imageSrcSet":"/catalogue/portugal/meridienne-51698-1-640.webp 640w, /catalogue/portugal/meridienne-51698-1-1280.webp 1280w","imageSizes":"(min-width: 1000px) 36vw, 80vw","fetchPriority":"high"}]
 :HL["/images/logo-light.png","image"]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"pays","t":"d","k":"portugal","s":[]},"h":65632,"c":"$Q3"}]]
 1:[["children",{"s":"catalogue","h":131168,"c":"$Q2"}]]
-0:{"b":"QK-ZhaYRLeIsd4RL-tnQg","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}
+0:{"b":"t4ZLpBYtjrcHtQzSKb5FW","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}

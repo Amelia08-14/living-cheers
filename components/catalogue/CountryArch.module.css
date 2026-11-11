@@ -61,20 +61,12 @@
   line-height: 1;
 }
 
-.brand {
+.specialty {
   margin-top: 10px;
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-}
-
-.brand span {
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  text-transform: none;
-  font-size: 0.95rem;
-  color: var(--slate);
 }
 
 .more {

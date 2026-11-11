@@ -8,17 +8,17 @@ const SITE_URL = 'https://livingcheers.groupevelmont.ca';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Living Cheers | Meubles, salons et confort — site en construction',
+    default: 'Living Cheers | Canapés, literie et fauteuils massants à Bathurst',
     template: '%s | Living Cheers',
   },
   description:
-    'Le site de Living Cheers est en construction. Meubles, salons et confort au Place Bathurst Mall, à Bathurst. Un chez-vous qui vous ressemble.',
+    'Living Cheers, au Place Bathurst Mall à Bathurst : canapés relax du Portugal, literie suisse et fauteuils massants de Belgique. Un chez-vous qui vous ressemble.',
   openGraph: {
     type: 'website',
     locale: 'fr_CA',
     siteName: 'Living Cheers',
-    title: 'Living Cheers — site en construction',
-    description: 'Meubles · Salons · Confort. Un chez-vous qui vous ressemble.',
+    title: 'Living Cheers — Le confort européen à Bathurst',
+    description: 'Canapés, literie et fauteuils massants. Un chez-vous qui vous ressemble.',
     images: [{ url: '/images/render-aerial-1400.webp', width: 1206, height: 680 }],
   },
   twitter: { card: 'summary_large_image' },

@@ -1,6 +1,6 @@
 import Gate from '@/components/Gate';
 import Hero from '@/components/Hero';
-import Brands from '@/components/Brands';
+import Collections from '@/components/Collections';
 import Contact from '@/components/Contact';
 import SiteFooter from '@/components/SiteFooter';
 import { SITE } from '@/lib/site';
@@ -30,7 +30,7 @@ export default function Home() {
       <Gate />
       <main>
         <Hero />
-        <Brands />
+        <Collections />
         <Contact />
       </main>
       <SiteFooter />

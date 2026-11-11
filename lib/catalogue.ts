@@ -1,5 +1,5 @@
-// Catalogue des marques représentées, classées par pays d'origine.
-// Textes repris des sites des marques (traduits du portugais pour Cheers), sans prix.
+// Catalogue par pays d'origine. Aucun nom de marque partenaire n'est affiché sur le site.
+// Textes repris des fiches fournisseurs (traduits du portugais pour le Portugal), sans prix.
 // Les photos sont générées par `npm run catalogue` (voir scripts/fetch-catalogue.mjs).
 import IMAGES from './catalogue-images.json';
 
@@ -23,10 +23,7 @@ export type Country = {
   slug: string;
   name: string;
   code: string;
-  brand: string;
-  brandKey: 'cheers' | 'swiss-forme' | 'kingpur';
   specialty: string;
-  place: string;
   tagline: string;
   intro: string[];
   facts: { value: string; label: string }[];
@@ -41,10 +38,10 @@ export type Country = {
 export type ProductImage = { src: string; srcSet: string; width: number; height: number };
 
 // ---------------------------------------------------------------------------
-// Portugal — Cheers (canapés)
+// Portugal — canapés et fauteuils
 // ---------------------------------------------------------------------------
 
-const CHEERS: Product[] = [
+const PORTUGAL: Product[] = [
   // Canapés d'angle
   {
     slug: 'angle-80690',
@@ -609,13 +606,13 @@ const CHEERS: Product[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// Suisse — Swiss Forme (literie et massage)
+// Suisse — literie et massage
 // ---------------------------------------------------------------------------
 
 const MATTRESS_SIZES = '90×190 · 90×200 · 140×190 · 140×200 · 160×200 · 180×200 cm';
 const PRO_SIZES = '70×190 · 70×200 · 80×200 · 90×190 · 90×200 · 140×190 · 140×200 · 160×200 · 180×200 cm';
 
-const SWISS: Product[] = [
+const SUISSE: Product[] = [
   // Matelas
   {
     slug: 'matelas-pro-s',
@@ -917,10 +914,10 @@ const SWISS: Product[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// Belgique — KingPur (fauteuils massants)
+// Belgique — fauteuils massants
 // ---------------------------------------------------------------------------
 
-const KINGPUR: Product[] = [
+const BELGIQUE: Product[] = [
   {
     slug: 'sunshine',
     cover: 3,
@@ -1013,13 +1010,10 @@ export const COUNTRIES: Country[] = [
     slug: 'portugal',
     name: 'Portugal',
     code: 'PT',
-    brand: 'Cheers',
-    brandKey: 'cheers',
     specialty: 'Canapés et fauteuils relax',
-    place: 'Pinhal Novo, Portugal',
     tagline: 'L’art de la détente.',
     intro: [
-      'Depuis près de vingt ans, Cheers conçoit et fabrique au Portugal des canapés où beauté, qualité et confort vont de pair.',
+      'Fabriqués au Portugal par des artisans du canapé depuis près de vingt ans, ces modèles réunissent beauté, qualité et confort.',
       'Chaque collection suit les tendances et l’innovation, du choix des cuirs et des tissus jusqu’aux mécanismes relax, testés pour durer.',
     ],
     facts: [
@@ -1036,20 +1030,17 @@ export const COUNTRIES: Country[] = [
       { slug: 'fauteuils', title: 'Fauteuils', intro: 'Relax, pivotants, releveurs.' },
       { slug: 'entretien', title: 'Entretien', intro: 'Pour garder vos tissus comme neufs.' },
     ],
-    products: CHEERS,
+    products: PORTUGAL,
   },
   {
     slug: 'suisse',
     name: 'Suisse',
     code: 'CH',
-    brand: 'Swiss Forme',
-    brandKey: 'swiss-forme',
     specialty: 'Literie et massage',
-    place: 'Zurich, Suisse',
-    tagline: 'Quand le sommeil rencontre l’excellence suisse.',
+    tagline: 'Le sommeil, avec la précision suisse.',
     intro: [
-      'Swiss Forme conçoit des matelas, oreillers et lits articulés qui allient technologie, ergonomie et matériaux de pointe.',
-      'Sa Série Pro favorise la récupération musculaire et un sommeil profond ; sa collection hôtelière répond aux exigences des plus beaux établissements.',
+      'Matelas, oreillers et lits articulés conçus en Suisse, qui allient technologie, ergonomie et matériaux de pointe.',
+      'La Série Pro favorise la récupération musculaire et un sommeil profond ; la collection hôtelière répond aux exigences des plus beaux établissements.',
     ],
     facts: [
       { value: 'UV Clean', label: 'tissus assainis à la lumière du jour' },
@@ -1065,19 +1056,16 @@ export const COUNTRIES: Country[] = [
       { slug: 'massage', title: 'Massage', intro: 'Fauteuils et appareils de massage.' },
       { slug: 'entretien', title: 'Entretien', intro: 'Protéger et nettoyer les tissus.' },
     ],
-    products: SWISS,
+    products: SUISSE,
   },
   {
     slug: 'belgique',
     name: 'Belgique',
     code: 'BE',
-    brand: 'KingPur',
-    brandKey: 'kingpur',
     specialty: 'Fauteuils massants',
-    place: 'Belgique et France',
-    tagline: 'L’excellence du bien-être a un nom.',
+    tagline: 'Le massage, comme un rituel.',
     intro: [
-      'Spécialiste du fauteuil massant en Belgique et en France, KingPur sélectionne des modèles haut de gamme pour leur technologie et leur design.',
+      'Sélectionnés par des spécialistes belges du bien-être, ces fauteuils massants haut de gamme se distinguent par leur technologie et leur design.',
       'Body scan, gravité zéro, massage 4D : chaque fauteuil adapte le rythme et l’intensité du massage à votre corps.',
     ],
     facts: [
@@ -1088,7 +1076,7 @@ export const COUNTRIES: Country[] = [
     visual: { product: 'samourai', index: 6, position: '50% 60%' },
     frame: { ratio: '4 / 5', fit: 'cover' },
     categories: [{ slug: 'fauteuils-massants', title: 'Fauteuils massants', intro: 'Quatre modèles, du compact au haut de gamme.' }],
-    products: KINGPUR,
+    products: BELGIQUE,
   },
 ];
 
@@ -1103,7 +1091,7 @@ function image(key: string, i: number, [width, height]: [number, number]): Produ
 
 /** Photos du produit, la photo de couverture en premier. */
 export function productImages(country: Country, product: Product): ProductImage[] {
-  const key = `${country.brandKey}/${product.slug}`;
+  const key = `${country.slug}/${product.slug}`;
   const list = (MANIFEST[key] ?? []).map((size, i) => image(key, i, size));
   const first = (product.cover ?? 1) - 1;
   return first > 0 && first < list.length ? [list[first], ...list.filter((_, i) => i !== first)] : list;
@@ -1111,7 +1099,7 @@ export function productImages(country: Country, product: Product): ProductImage[
 
 export function countryVisual(country: Country): ProductImage {
   const { product, index } = country.visual;
-  const key = `${country.brandKey}/${product}`;
+  const key = `${country.slug}/${product}`;
   return image(key, index - 1, MANIFEST[key][index - 1]);
 }
 

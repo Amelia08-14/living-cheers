@@ -35,9 +35,7 @@ export default function CountryArch({ country, sizes = '(min-width: 900px) 30vw,
       </div>
       <div className={styles.text}>
         <Heading className={styles.name}>{country.name}</Heading>
-        <p className={styles.brand}>
-          {country.brand} <span>· {country.specialty}</span>
-        </p>
+        <p className={styles.specialty}>{country.specialty}</p>
         <p className={styles.more}>
           {country.products.length} modèles
           <span aria-hidden="true" className={styles.arrow}>

@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   if (!country) return {};
   const img = countryVisual(country);
   return {
-    title: `${country.name} · ${country.brand}`,
-    description: `${country.brand} (${country.name}) : ${country.specialty.toLowerCase()}. ${country.products.length} modèles au catalogue Living Cheers.`,
+    title: `Collection ${country.name}`,
+    description: `Collection ${country.name} : ${country.specialty.toLowerCase()}. ${country.products.length} modèles au catalogue Living Cheers.`,
     alternates: { canonical: `/catalogue/${country.slug}` },
     openGraph: { images: [{ url: img.src, width: img.width, height: img.height }] },
   };
@@ -50,9 +50,9 @@ export default async function CountryPage({ params }: Params) {
         <section className={`wrap ${styles.countryHero}`}>
           <div className={styles.countryCopy}>
             <p className="eyebrow">
-              {country.code} · {country.place}
+              {country.code} · {country.specialty}
             </p>
-            <h1 className={styles.brandTitle}>{country.brand}</h1>
+            <h1 className={styles.brandTitle}>{country.name}</h1>
             <p className={styles.tagline}>{country.tagline}</p>
             {country.intro.map((t) => (
               <p key={t} className={styles.body}>
