@@ -21,7 +21,25 @@
     "afterFiles": [],
     "fallback": []
   },
-  "dynamicRoutes": [],
+  "dynamicRoutes": [
+    {
+      "page": "/catalogue/[pays]",
+      "regex": "^/catalogue/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpays": "nxtPpays"
+      },
+      "namedRegex": "^/catalogue/(?<nxtPpays>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/catalogue/[pays]/[produit]",
+      "regex": "^/catalogue/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpays": "nxtPpays",
+        "nxtPproduit": "nxtPproduit"
+      },
+      "namedRegex": "^/catalogue/(?<nxtPpays>[^/]+?)/(?<nxtPproduit>[^/]+?)(?:/)?$"
+    }
+  ],
   "staticRoutes": [
     {
       "page": "/",
@@ -40,6 +58,12 @@
       "regex": "^/_not\\-found(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/catalogue",
+      "regex": "^/catalogue(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/catalogue(?:/)?$"
     },
     {
       "page": "/icon.svg",

@@ -1,0 +1,44 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/catalogue/layout,_N_T_/catalogue/[pays]/layout,_N_T_/catalogue/[pays]/[produit]/layout,_N_T_/catalogue/[pays]/[produit]/page,_N_T_/catalogue/suisse/lit-zurich"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/catalogue/$d$pays/$d$produit/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 64,
+    "slots": {
+      "children": {
+        "hints": 96,
+        "slots": {
+          "children": {
+            "hints": 96,
+            "slots": {
+              "children": {
+                "hints": 96,
+                "slots": {
+                  "children": {
+                    "hints": 160,
+                    "slots": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/e0caa17d0bf4afa8598e89bff2bdde451b16cd7ed67d58a8def7acee5bde5f95/$/catalogue/suisse/lit-zurich",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/catalogue/[pays]/[produit]/page"
+    },
+    "isFallback": false
+  }
+}

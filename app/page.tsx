@@ -1,6 +1,8 @@
 import Gate from '@/components/Gate';
 import Hero from '@/components/Hero';
+import Brands from '@/components/Brands';
 import Contact from '@/components/Contact';
+import SiteFooter from '@/components/SiteFooter';
 import { SITE } from '@/lib/site';
 
 const jsonLd = {
@@ -28,8 +30,10 @@ export default function Home() {
       <Gate />
       <main>
         <Hero />
+        <Brands />
         <Contact />
       </main>
+      <SiteFooter />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </>
   );

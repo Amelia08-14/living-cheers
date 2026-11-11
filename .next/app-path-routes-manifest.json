@@ -1,6 +1,9 @@
 {
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
+  "/catalogue/[pays]/[produit]/page": "/catalogue/[pays]/[produit]",
+  "/catalogue/[pays]/page": "/catalogue/[pays]",
+  "/catalogue/page": "/catalogue",
   "/icon.svg/route": "/icon.svg",
   "/page": "/",
   "/robots.txt/route": "/robots.txt",

@@ -1,0 +1,1134 @@
+// Catalogue des marques représentées, classées par pays d'origine.
+// Textes repris des sites des marques (traduits du portugais pour Cheers), sans prix.
+// Les photos sont générées par `npm run catalogue` (voir scripts/fetch-catalogue.mjs).
+import IMAGES from './catalogue-images.json';
+
+export type Spec = { label: string; value: string };
+
+export type Product = {
+  slug: string;
+  name: string;
+  category: string;
+  summary: string;
+  description: string[];
+  features?: string[];
+  specs?: Spec[];
+  /** Photo de couverture (1 = première), si la première ne convient pas. */
+  cover?: number;
+};
+
+export type Category = { slug: string; title: string; intro: string };
+
+export type Country = {
+  slug: string;
+  name: string;
+  code: string;
+  brand: string;
+  brandKey: 'cheers' | 'swiss-forme' | 'kingpur';
+  specialty: string;
+  place: string;
+  tagline: string;
+  intro: string[];
+  facts: { value: string; label: string }[];
+  /** Photo d'ambiance du pays (arche) : produit, numéro de photo, cadrage. */
+  visual: { product: string; index: number; position: string };
+  /** Cadrage des photos dans les vignettes : scène recadrée ou packshot entier. */
+  frame: { ratio: string; fit: 'cover' | 'contain' };
+  categories: Category[];
+  products: Product[];
+};
+
+export type ProductImage = { src: string; srcSet: string; width: number; height: number };
+
+// ---------------------------------------------------------------------------
+// Portugal — Cheers (canapés)
+// ---------------------------------------------------------------------------
+
+const CHEERS: Product[] = [
+  // Canapés d'angle
+  {
+    slug: 'angle-80690',
+    name: 'Angle 80690',
+    category: 'angles',
+    summary: 'Relax électrique et têtières électriques indépendantes à chaque place.',
+    description: [
+      'Canapé d’angle moderne avec relax électrique et têtières électriques indépendantes, pour un confort maximal et un réglage personnalisé à chaque place.',
+    ],
+    features: ['Relax électrique', 'Têtières électriques indépendantes'],
+    specs: [
+      { label: 'Dimensions', value: '307 × 223 cm' },
+      { label: 'Coloris', value: 'Vert · Fog Grey · Sand Cream' },
+    ],
+  },
+  {
+    slug: 'angle-cloud',
+    name: 'Angle Cloud',
+    category: 'angles',
+    summary: 'Assises coulissantes électriques et têtières multipositions.',
+    description: [
+      'Canapé d’angle moderne avec assises coulissantes électriques et têtières multipositions, pensé pour un confort maximal au quotidien.',
+      'Une solution complète qui allie confort et design.',
+    ],
+    features: ['Assises coulissantes électriques', 'Têtières multipositions'],
+    specs: [{ label: 'Dimensions', value: '307 × 223 cm' }],
+  },
+  {
+    slug: 'angle-7975',
+    name: 'Angle 7975',
+    category: 'angles',
+    summary: 'Relax et têtière électriques, console avec chargeurs sans fil et liseuse.',
+    description: [
+      'Canapé d’angle moderne avec relax et têtière électriques, pensé pour un confort maximal.',
+      'Il intègre une console avec chargeurs sans fil, porte-gobelets, rangement et lampe intégrée.',
+    ],
+    features: ['Relax électrique', 'Têtière électrique', 'Chargeurs sans fil', 'Porte-gobelets et rangement', 'Lampe intégrée'],
+    specs: [
+      { label: 'Dimensions', value: '307 × 223 cm' },
+      { label: 'Coloris', value: 'Blanc · Gris clair · Taupe' },
+    ],
+  },
+  {
+    slug: 'angle-70829',
+    name: 'Angle 70829',
+    category: 'angles',
+    summary: 'Dossiers inclinables et grande assise pour toute la famille.',
+    description: [
+      'Le modèle 70829 est plus qu’un canapé d’angle : c’est une invitation à la détente. Ses dossiers inclinables offrent un confort personnalisé à chaque moment de la journée, pour une pause rapide, pour recevoir ou pour de longues heures de repos.',
+      'Son design contemporain s’accorde aux intérieurs modernes et chaleureux. Sa structure généreuse accueille toute la famille, avec des matériaux de grande qualité et un rembourrage moelleux.',
+    ],
+    features: ['Dossiers inclinables', 'Grande assise familiale', 'Rembourrage moelleux'],
+    specs: [{ label: 'Dimensions', value: '307 × 226 cm' }],
+  },
+  {
+    slug: 'angle-70785',
+    name: 'Angle 70785',
+    category: 'angles',
+    summary: 'Places relax et repose-pieds extensibles, positions réglables.',
+    description: [
+      'Faites de votre salon un véritable refuge avec ce canapé d’angle relax aux positions réglables, qui réunit fonctionnalité, style et bien-être.',
+      'Ses assises inclinables et son repose-pieds extensible vous laissent choisir la position idéale pour regarder un film, lire ou simplement vous reposer.',
+    ],
+    features: ['Assises inclinables', 'Repose-pieds extensible'],
+    specs: [{ label: 'Dimensions', value: '302 × 221 cm' }],
+  },
+  {
+    slug: 'angle-onix',
+    name: 'Angle Onix',
+    category: 'angles',
+    summary: 'Relax électrique, son numérique intégré et chargeurs pour téléphones.',
+    description: [
+      'L’Angle Onix réunit confort, fonctionnalité et technologie. Son relax électrique permet de trouver la position idéale, et sa têtière électrique rabattable soutient la tête et la nuque.',
+      'Un système de son numérique est intégré aux têtières pour une écoute enveloppante. Des rangements discrets accueillent revues et télécommandes, et la console est équipée de chargeurs pour téléphones.',
+    ],
+    features: ['Relax électrique', 'Têtière électrique rabattable', 'Son numérique intégré', 'Rangements discrets', 'Chargeurs pour téléphones'],
+  },
+  {
+    slug: 'angle-51727',
+    name: 'Angle 51727',
+    category: 'angles',
+    summary: 'Deux relax électriques indépendants et ports USB intégrés.',
+    description: [
+      'Design contemporain et technologie intégrée se rencontrent dans cette pièce à forte présence. Deux relax électriques indépendants, aux mouvements doux et silencieux, offrent un confort personnalisé.',
+      'Les chargeurs USB intégrés ajoutent une touche pratique sans compromettre l’esthétique épurée.',
+    ],
+    features: ['Deux relax électriques indépendants', 'Mouvements doux et silencieux', 'Chargeurs USB'],
+    specs: [
+      { label: 'Dimensions', value: '278 × 207 cm' },
+      { label: 'Coloris', value: 'Gris · Camel' },
+    ],
+  },
+  {
+    slug: 'angle-aromo',
+    name: 'Angle Aromo',
+    category: 'angles',
+    summary: 'Têtières inclinables, relax manuels et pieds en aluminium.',
+    description: [
+      'L’Angle Aromo est conçu pour le confort et la détente. Ses têtières inclinables offrent un soutien sur mesure, et ses relax manuels se règlent sans effort.',
+      'Ses élégants pieds en aluminium apportent une touche moderne et une base robuste à ce grand canapé, idéal pour la famille comme pour recevoir.',
+    ],
+    features: ['Têtières inclinables', 'Relax manuels', 'Pieds en aluminium'],
+    specs: [{ label: 'Dimensions', value: '340 × 200 × 150 cm ou 370 × 210 × 150 cm' }],
+  },
+  {
+    slug: 'angle-11072',
+    name: 'Angle 11072',
+    category: 'angles',
+    summary: 'Relax électrique, lampe intégrée et chargeur sans fil.',
+    description: [
+      'L’Angle 11072 est le complément idéal de tout salon. Son relax électrique se règle d’une simple pression.',
+      'Sa lampe intégrée éclaire la lecture du soir ou la soirée cinéma, tandis que ses porte-gobelets et son petit compartiment accueillent télécommandes et petits objets. Un chargeur sans fil garde vos appareils chargés pendant que vous vous détendez.',
+    ],
+    features: ['Relax électrique', 'Lampe intégrée', 'Porte-gobelets et rangement', 'Chargeur sans fil'],
+    specs: [{ label: 'Dimensions', value: '285 × 208,5 cm' }],
+  },
+  {
+    slug: 'angle-aqua',
+    name: 'Angle Aqua',
+    category: 'angles',
+    summary: 'Grand angle familial, assises coulissantes et son intégré.',
+    description: [
+      'Spacieux, l’Angle Aqua est pensé pour se retrouver en famille. Son assise coulissante et ses têtières articulées offrent un confort réglable pour chacun.',
+      'Son système de son intégré permet de profiter d’une soirée cinéma sans enceintes supplémentaires.',
+    ],
+    features: ['Assise coulissante', 'Têtières articulées', 'Système de son intégré'],
+    specs: [{ label: 'Dimensions', value: '355 × 300 × 110 cm' }],
+  },
+  {
+    slug: 'angle-9222',
+    name: 'Angle 9222',
+    category: 'angles',
+    summary: 'Relax manuel, porte-gobelets et compartiment de rangement.',
+    description: [
+      'L’Angle 9222 est le complément parfait du salon ou de l’espace télé. Son relax manuel permet d’ajuster facilement la position.',
+      'Ses porte-gobelets intégrés gardent les boissons à portée de main, et un petit compartiment range télécommandes et revues.',
+    ],
+    features: ['Relax manuel', 'Porte-gobelets', 'Compartiment de rangement'],
+    specs: [{ label: 'Dimensions', value: '267 × 219 cm' }],
+  },
+
+  // Canapés avec méridienne
+  {
+    slug: 'meridienne-onix',
+    name: 'Méridienne Onix',
+    category: 'meridiennes',
+    summary: 'Son Dolby Atmos dans les têtières et assises vibrantes.',
+    description: [
+      'Canapé méridienne haut de gamme avec son Dolby Atmos intégré aux têtières et assises vibrantes, pour une expérience immersive unique.',
+      'Il est équipé d’un relax électrique, de têtières réglables, de chargeurs sans fil et d’un rangement intégré. Technologie, confort et design réunis.',
+    ],
+    features: ['Son Dolby Atmos', 'Assises vibrantes', 'Relax électrique', 'Têtières réglables', 'Chargeurs sans fil', 'Rangement intégré'],
+    specs: [{ label: 'Dimensions', value: '285 × 160 cm' }],
+  },
+  {
+    slug: 'meridienne-noosa',
+    name: 'Méridienne Noosa',
+    category: 'meridiennes',
+    summary: 'Relax électrique, massage à air et assises chauffantes.',
+    description: [
+      'Méridienne moderne avec relax électrique, massage à air et chauffage des assises. Un confort total allié à un design élégant et fonctionnel.',
+    ],
+    features: ['Relax électrique', 'Massage à air', 'Assises chauffantes'],
+    specs: [{ label: 'Dimensions', value: '330 × 170 cm' }],
+  },
+  {
+    slug: 'meridienne-51698',
+    name: 'Méridienne 51698',
+    category: 'meridiennes',
+    summary: 'Cuir naturel et relax électrique.',
+    description: [
+      'Canapé méridienne en cuir naturel, avec relax électrique pour régler la position en douceur.',
+      'Son assise ample et enveloppante, alliée au toucher du cuir, offre un repos supérieur. Un design élégant et contemporain pour les intérieurs raffinés.',
+    ],
+    features: ['Cuir naturel', 'Relax électrique', 'Assise enveloppante'],
+    specs: [
+      { label: 'Dimensions', value: '269 × 166 cm' },
+      { label: 'Coloris', value: 'Gris clair · Brun · Beige' },
+    ],
+  },
+  {
+    slug: 'meridienne-518',
+    name: 'Méridienne 518',
+    category: 'meridiennes',
+    summary: 'Relax, têtière et méridienne électriques.',
+    description: [
+      'Canapé moderne avec relax électrique, à l’ouverture douce et pratique. Sa têtière électrique réglable et sa méridienne électrique s’adaptent à toutes les positions de repos.',
+    ],
+    features: ['Relax électrique', 'Têtière électrique', 'Méridienne électrique'],
+    specs: [{ label: 'Dimensions', value: '289 × 164 cm' }],
+  },
+  {
+    slug: 'meridienne-80581',
+    name: 'Méridienne 80581',
+    category: 'meridiennes',
+    summary: 'Assises coulissantes électriques et grand tiroir de rangement.',
+    description: [
+      'Canapé à assises coulissantes électriques, pour un confort maximal et un réglage personnalisé.',
+      'Un grand tiroir de rangement intégré garde le salon en ordre. Design moderne et finitions haut de gamme.',
+    ],
+    features: ['Assises coulissantes électriques', 'Tiroir de rangement intégré'],
+    specs: [
+      { label: 'Dimensions', value: '295 × 157 cm' },
+      { label: 'Coloris', value: 'Moss Green · Gris clair · Sand Cream' },
+    ],
+  },
+  {
+    slug: 'meridienne-51129',
+    name: 'Méridienne 51129',
+    category: 'meridiennes',
+    summary: 'Assises coulissantes électriques, lignes contemporaines.',
+    description: [
+      'La Méridienne 51129 trouve l’équilibre entre design moderne, confort et technologie. Ses lignes contemporaines apportent raffinement à tout salon.',
+      'Ses mécanismes coulissants électriques ajustent la profondeur d’assise avec douceur et précision, pour regarder la télévision, lire ou se détendre. La commande, discrète, reste facile d’accès.',
+    ],
+    features: ['Assises coulissantes électriques', 'Commande discrète'],
+    specs: [{ label: 'Dimensions', value: '304 × 115 cm' }],
+  },
+  {
+    slug: 'meridienne-zoy',
+    name: 'Méridienne Zoy',
+    category: 'meridiennes',
+    summary: 'Design minimaliste, têtières réglables et assises coulissantes.',
+    description: [
+      'Canapé contemporain au design minimaliste. Ses têtières réglables s’adaptent à la position de repos idéale, et ses assises coulissantes manuelles augmentent la profondeur d’assise.',
+    ],
+    features: ['Têtières réglables', 'Assises coulissantes manuelles'],
+    specs: [{ label: 'Dimensions', value: '290 × 160 cm' }],
+  },
+  {
+    slug: 'meridienne-moon',
+    name: 'Méridienne Moon',
+    category: 'meridiennes',
+    summary: 'Assises coulissantes manuelles et têtières inclinables.',
+    description: [
+      'Canapé moderne à assises coulissantes manuelles, pour ajuster la profondeur selon votre confort. Têtières inclinables et lignes épurées, idéal pour un intérieur contemporain.',
+    ],
+    features: ['Assises coulissantes manuelles', 'Têtières inclinables'],
+    specs: [{ label: 'Dimensions', value: '335 × 115 cm' }],
+  },
+  {
+    slug: 'meridienne-sydney',
+    name: 'Méridienne Sydney',
+    category: 'meridiennes',
+    summary: 'Assises coulissantes, têtières inclinables, pieds en aluminium.',
+    description: [
+      'La Méridienne Sydney apporte une touche moderne et luxueuse au salon. Ses assises coulissantes manuelles offrent un confort réglable et ses têtières inclinables l’angle idéal pour se détendre.',
+      'Ses élégants pieds en aluminium complètent un design raffiné.',
+    ],
+    features: ['Assises coulissantes manuelles', 'Têtières inclinables', 'Pieds en aluminium'],
+    specs: [{ label: 'Dimensions', value: '260 × 165 cm ou 290 × 165 cm' }],
+  },
+  {
+    slug: 'meridienne-berna',
+    name: 'Méridienne Berna',
+    category: 'meridiennes',
+    summary: 'Relax manuels et pieds en aluminium noir.',
+    description: [
+      'Élégante et polyvalente, la Méridienne Berna dispose de places relax manuelles pour trouver la position parfaite.',
+      'Ses pieds en aluminium noir lui donnent une allure moderne et sophistiquée, pour un livre comme pour une soirée cinéma.',
+    ],
+    features: ['Relax manuels', 'Pieds en aluminium noir'],
+    specs: [{ label: 'Dimensions', value: '290 × 175 cm ou 320 × 175 cm' }],
+  },
+  {
+    slug: 'meridienne-ankara',
+    name: 'Méridienne Ankara',
+    category: 'meridiennes',
+    summary: 'Assises coulissantes et têtières inclinables.',
+    description: [
+      'Élégante et moderne, la Méridienne Ankara dispose d’assises coulissantes pour adapter la disposition à votre espace, et de têtières inclinables pour les soirées cinéma ou les dimanches paresseux.',
+      'Un design luxueux et une fabrication de grande qualité.',
+    ],
+    features: ['Assises coulissantes', 'Têtières inclinables'],
+    specs: [{ label: 'Dimensions', value: '300 × 175 cm ou 330 × 175 cm' }],
+  },
+
+  // Canapés & ensembles
+  {
+    slug: 'canape-noosa',
+    name: 'Canapé Noosa',
+    category: 'canapes',
+    summary: 'Relax électrique, massage à air et assises chauffantes.',
+    description: [
+      'Canapé moderne avec relax électrique, massage à air et chauffage des assises. Un confort total allié à un design élégant et fonctionnel.',
+    ],
+    features: ['Relax électrique', 'Massage à air', 'Assises chauffantes'],
+    specs: [{ label: 'Dimensions', value: '240 × 110 cm' }],
+  },
+  {
+    slug: 'canape-cloud',
+    name: 'Canapé Cloud',
+    category: 'canapes',
+    summary: 'Assises coulissantes électriques et têtières multipositions.',
+    description: [
+      'Canapé moderne avec assises coulissantes électriques et têtières multipositions, qui s’adapte à chacun. Un design élégant et fonctionnel, idéal pour la détente.',
+    ],
+    features: ['Assises coulissantes électriques', 'Têtières multipositions'],
+    specs: [{ label: 'Dimensions', value: '208 × 99 cm' }],
+  },
+  {
+    slug: 'canape-70829',
+    name: 'Canapé 70829',
+    category: 'canapes',
+    summary: 'Relax électriques et têtières inclinables.',
+    description: [
+      'Le canapé 70829 s’adresse à ceux qui ne renoncent ni au confort absolu ni au design. Ses mécanismes de relax électriques règlent le dossier et le repose-pieds d’une simple touche.',
+      'Ses têtières inclinables soutiennent la tête et la nuque pour un confort encore plus ergonomique.',
+    ],
+    features: ['Relax électriques', 'Têtières inclinables'],
+    specs: [{ label: 'Dimensions', value: '214 × 101 cm' }],
+  },
+  {
+    slug: 'canape-70785',
+    name: 'Canapé 70785',
+    category: 'canapes',
+    summary: 'Mécanisme individuel par place et têtières inclinables.',
+    description: [
+      'Le canapé 70785 associe raffinement, ergonomie et technologie. Ses têtières inclinables soutiennent la tête et la nuque, pour la télévision comme pour la lecture.',
+      'Chaque place dispose de son propre mécanisme de dossier et de repose-pieds : chacun règle sa position en toute indépendance.',
+    ],
+    features: ['Mécanisme individuel par place', 'Têtières inclinables'],
+    specs: [{ label: 'Dimensions', value: '198 × 101 cm' }],
+  },
+  {
+    slug: 'ensemble-51197',
+    name: 'Ensemble 51197 (3 + 2)',
+    category: 'canapes',
+    summary: 'Deux relax électriques, deux relax manuels, tissu anti-taches.',
+    description: [
+      'Ensemble 3 + 2 qui allie confort et fonctionnalité au quotidien. Recouvert d’un tissu anti-taches, il compte deux relax électriques au réglage doux et précis, complétés par deux relax manuels.',
+    ],
+    features: ['2 relax électriques', '2 relax manuels', 'Tissu anti-taches'],
+    specs: [
+      { label: 'Dimensions', value: '3 places : 198 × 97 cm · 2 places : 158 × 97 cm' },
+      { label: 'Coloris', value: 'Beige · Camel' },
+    ],
+  },
+  {
+    slug: 'ensemble-51197-duo',
+    name: 'Ensemble 51197 (2 + 2)',
+    category: 'canapes',
+    summary: 'Deux canapés 2 places : un relax électrique, un relax manuel.',
+    description: [
+      'Cet ensemble réunit deux canapés 2 places : l’un à relax électrique, l’autre à relax manuel.',
+      'Le relax électrique règle dossier et repose-pieds d’une simple touche ; le relax manuel offre le même bien-être avec un système simple et pratique. Design contemporain, rembourrage douillet et finitions de grande qualité.',
+    ],
+    features: ['Relax électrique', 'Relax manuel'],
+    specs: [{ label: 'Dimensions', value: '198 × 97 cm · 158 × 97 cm' }],
+  },
+  {
+    slug: 'ensemble-51651',
+    name: 'Ensemble 51651 (3 + 2)',
+    category: 'canapes',
+    summary: 'Relax manuel et tissu adapté aux animaux.',
+    description: [
+      'Ensemble 3 + 2 à relax manuel, au mécanisme inclinable simple et intuitif. Ses lignes modernes et accueillantes sont habillées d’un tissu adapté aux animaux, résistant et durable, idéal pour la détente en famille.',
+    ],
+    features: ['Relax manuel', 'Tissu adapté aux animaux'],
+    specs: [
+      { label: 'Dimensions', value: '3 places : 193 × 94 cm · 2 places : 142 × 94 cm' },
+      { label: 'Coloris', value: 'Ash · Ice' },
+    ],
+  },
+  {
+    slug: 'ensemble-dublin',
+    name: 'Ensemble Dublin (3 + 2)',
+    category: 'canapes',
+    summary: 'Deux relax électriques, soutien lombaire renforcé.',
+    description: [
+      'Ensemble 3 + 2 au design contemporain. Ses deux relax électriques se règlent simplement, et ses deux places fixes assurent stabilité et équilibre visuel.',
+      'Recouvert d’un tissu doux au toucher, avec dossiers ergonomiques et soutien lombaire renforcé.',
+    ],
+    features: ['2 relax électriques', 'Soutien lombaire renforcé', 'Tissu doux au toucher'],
+    specs: [{ label: 'Dimensions', value: '3 places : 195 × 90 cm · 2 places : 155 × 90 cm' }],
+  },
+  {
+    slug: 'ensemble-2027',
+    name: 'Ensemble 2027',
+    category: 'canapes',
+    summary: 'Canapé 3 places à relax électrique et fauteuil berçant.',
+    description: [
+      'Un ensemble élégant composé d’un canapé 3 places à relax électrique et d’un fauteuil berçant : le confort en double.',
+    ],
+    features: ['Relax électrique', 'Fauteuil berçant'],
+    specs: [{ label: 'Dimensions', value: 'Canapé : 206 × 97 cm · Fauteuil : 101 × 101 cm' }],
+  },
+  {
+    slug: 'ensemble-1007',
+    name: 'Ensemble 1007 (3 + 2)',
+    category: 'canapes',
+    summary: 'Relax électriques et ports USB.',
+    description: [
+      'L’ensemble 1007 réunit confort et technologie : relax électriques et ports USB pour recharger vos appareils.',
+      'Un design moderne et des matériaux de qualité pour un confort durable.',
+    ],
+    features: ['Relax électriques', 'Ports USB'],
+    specs: [{ label: 'Dimensions', value: '3 places : 203 × 94 cm · 2 places : 150 × 94 cm' }],
+  },
+  {
+    slug: 'ensemble-5277',
+    name: 'Ensemble 5277 (3 + 2)',
+    category: 'canapes',
+    summary: 'Relax manuel, lignes élégantes.',
+    description: [
+      'L’ensemble 5277 dispose d’un mécanisme relax manuel. Son design élégant et moderne apporte une touche de raffinement au salon, avec un grand soin du détail.',
+    ],
+    features: ['Relax manuel'],
+    specs: [{ label: 'Dimensions', value: '3 places : 195 × 97 cm · 2 places : 150 × 97 cm' }],
+  },
+  {
+    slug: 'ensemble-9222',
+    name: 'Ensemble 9222 (3 + 2 + 1)',
+    category: 'canapes',
+    summary: 'Canapé 3 places, 2 places et fauteuil à relax manuel.',
+    description: [
+      'Ensemble composé d’un canapé 3 places, d’un canapé 2 places et d’un fauteuil, à relax manuel. Design contemporain et rembourrage moelleux, fabriqué pour durer.',
+    ],
+    features: ['Relax manuel', 'Trois pièces'],
+    specs: [{ label: 'Dimensions', value: '230 × 95 cm · 170 × 95 cm · 105 × 95 cm' }],
+  },
+  {
+    slug: 'ensemble-9939',
+    name: 'Ensemble 9939 (3 + 2 + 1)',
+    category: 'canapes',
+    summary: 'Relax manuel, format compact.',
+    description: [
+      'L’ensemble 9939 dispose d’une fonction relax manuelle pour trouver facilement le bon niveau de confort. Son design contemporain et son rembourrage moelleux en font aussi une belle pièce de décoration.',
+      'Fabriqué avec des matériaux de qualité, il est conçu pour durer.',
+    ],
+    features: ['Relax manuel', 'Trois pièces'],
+    specs: [{ label: 'Dimensions', value: '190 × 75 cm · 140 × 75 cm · 90 × 75 cm' }],
+  },
+
+  // Fauteuils
+  {
+    slug: 'fauteuil-miami',
+    name: 'Fauteuil Miami',
+    category: 'fauteuils',
+    summary: 'Lignes organiques et base pivotante.',
+    description: [
+      'Fauteuil au design contemporain, aux lignes organiques et à la forte présence. Structure enveloppante, assise ergonomique et base pivotante.',
+    ],
+    features: ['Base pivotante', 'Assise ergonomique'],
+    specs: [{ label: 'Dimensions', value: '110 × 85 cm' }],
+  },
+  {
+    slug: 'fauteuil-lazy',
+    name: 'Fauteuil Lazy',
+    category: 'fauteuils',
+    summary: 'Relax électrique, aide au lever et massage à air.',
+    description: [
+      'Fauteuil à relax électrique, au réglage doux et précis. Son système releveur facilite le lever au quotidien.',
+      'Il intègre un massage à air pour une expérience relaxante et revigorante.',
+    ],
+    features: ['Relax électrique', 'Fauteuil releveur', 'Massage à air'],
+    specs: [{ label: 'Dimensions', value: '80 × 80 cm' }],
+  },
+  {
+    slug: 'fauteuil-71093',
+    name: 'Fauteuil 71093',
+    category: 'fauteuils',
+    summary: 'Relax électrique à deux moteurs.',
+    description: [
+      'Fauteuil à relax électrique conçu pour le confort et le soutien ergonomique. Ses deux moteurs règlent séparément le dossier et le repose-jambes.',
+      'Design élégant et rembourrage haut de gamme.',
+    ],
+    features: ['Relax électrique', 'Deux moteurs'],
+  },
+  {
+    slug: 'fauteuil-55189',
+    name: 'Fauteuil 55189',
+    category: 'fauteuils',
+    summary: 'Cuir et relax électrique.',
+    description: [
+      'Fauteuil en cuir avec relax électrique, offrant une grande liberté de mouvement et beaucoup de polyvalence dans l’espace.',
+    ],
+    features: ['Cuir', 'Relax électrique'],
+    specs: [
+      { label: 'Dimensions', value: '81 × 89 cm' },
+      { label: 'Coloris', value: 'Beige' },
+    ],
+  },
+  {
+    slug: 'fauteuil-70785',
+    name: 'Fauteuil 70785',
+    category: 'fauteuils',
+    summary: 'Pivotant à 360° et inclinable.',
+    description: [
+      'Le fauteuil 70785 unit design contemporain, fonctionnalité et bien-être. Pivotant à 360° et inclinable, il laisse trouver la position idéale pour lire ou se détendre.',
+      'Son mécanisme d’inclinaison est doux et intuitif, et sa base pivotante se manœuvre sans effort.',
+    ],
+    features: ['Pivotant à 360°', 'Inclinable'],
+    specs: [{ label: 'Dimensions', value: '101 × 101 cm' }],
+  },
+  {
+    slug: 'fauteuil-1098',
+    name: 'Fauteuil 1098',
+    category: 'fauteuils',
+    summary: 'Fauteuil au dessin épuré, en trois coloris.',
+    description: ['Fauteuil au dessin épuré, proposé en trois coloris.'],
+    specs: [
+      { label: 'Dimensions', value: '71 × 81 cm' },
+      { label: 'Coloris', value: 'Vert · Sand Cream · Fog Grey' },
+    ],
+  },
+  {
+    slug: 'fauteuil-71099',
+    name: 'Fauteuil 71099',
+    category: 'fauteuils',
+    summary: 'Base pivotante et forme enveloppante.',
+    description: [
+      'Fauteuil à base pivotante, qui offre une totale liberté de mouvement. Sa forme enveloppante et ergonomique en fait un lieu de détente chaleureux.',
+    ],
+    features: ['Base pivotante', 'Forme enveloppante'],
+    specs: [{ label: 'Coloris', value: 'Moss Green · Gris clair · Sand Cream' }],
+  },
+  {
+    slug: 'table-55165',
+    name: 'Table basse 2 en 1 55165',
+    category: 'fauteuils',
+    summary: 'Table basse qui se transforme en fauteuil.',
+    description: [
+      'Table basse polyvalente qui se transforme facilement en fauteuil. Elle intègre un rangement discret.',
+      'Recouverte d’un tissu adapté aux animaux, résistant et facile à nettoyer.',
+    ],
+    features: ['2 en 1 : table et fauteuil', 'Rangement discret', 'Tissu adapté aux animaux'],
+    specs: [
+      { label: 'Dimensions', value: '120 × 64 cm' },
+      { label: 'Coloris', value: 'Ash · Ice' },
+    ],
+  },
+
+  // Entretien
+  {
+    slug: 'cleaning-pro',
+    name: 'Cleaning Pro',
+    category: 'entretien',
+    summary: 'Nettoyant pour tissus d’ameublement.',
+    description: [
+      'Le Cleaning Pro est un nettoyant avancé qui élimine la saleté tenace et ravive les tissus d’ameublement. Sa formule professionnelle pénètre les fibres pour dissoudre taches, odeurs et résidus sans abîmer le tissu.',
+      'Il retire les taches d’aliments, de boissons, d’huile, de transpiration, de poussière et de graisse, sans auréoles et sans altérer la couleur. Pour canapés, chaises, têtes de lit et fauteuils en tissu.',
+    ],
+    features: ['Pulvériser sur la surface', 'Frotter avec un chiffon humide', 'Laisser sécher naturellement'],
+  },
+  {
+    slug: 'protecting-spray',
+    name: 'Protecting Spray',
+    category: 'entretien',
+    summary: 'Protection imperméabilisante pour tissus.',
+    description: [
+      'Le Protecting Spray crée une barrière invisible sur les tissus d’ameublement. Il repousse les liquides, empêche l’absorption des graisses et réduit fortement le risque de taches permanentes.',
+      'Il n’altère ni la texture, ni la couleur, ni la douceur du tissu, qui continue de respirer. Il prolonge la vie du mobilier et simplifie l’entretien.',
+    ],
+    features: [
+      'Nettoyer la surface du canapé',
+      'Pulvériser uniformément jusqu’à humidifier',
+      'Laisser sécher environ 6 heures',
+      'Renouveler tous les 6 mois',
+    ],
+  },
+];
+
+// ---------------------------------------------------------------------------
+// Suisse — Swiss Forme (literie et massage)
+// ---------------------------------------------------------------------------
+
+const MATTRESS_SIZES = '90×190 · 90×200 · 140×190 · 140×200 · 160×200 · 180×200 cm';
+const PRO_SIZES = '70×190 · 70×200 · 80×200 · 90×190 · 90×200 · 140×190 · 140×200 · 160×200 · 180×200 cm';
+
+const SWISS: Product[] = [
+  // Matelas
+  {
+    slug: 'matelas-pro-s',
+    cover: 2,
+    name: 'Matelas Pro S',
+    category: 'matelas',
+    summary: 'Vibromassage intégré et traitement UV Clean. Série Pro.',
+    description: [
+      'Le Pro S est conçu pour ceux qui exigent davantage de leur corps et recherchent une récupération musculaire efficace. Sa couche supérieure profilée, associée au système de vibromassage intégré, procure une relaxation profonde et stimule la circulation.',
+      'Son noyau 3-Layer Core™ combine une mousse à grille hyperélastique, un cœur haute densité et une mousse viscoélastique, sur 30 cm d’épaisseur, avec des zones de couchage indépendantes.',
+    ],
+    features: [
+      'Vibromassage (8 points de massage)',
+      'Traitement UV Clean antibactérien et antiviral',
+      'Noyau 3 couches, 30 cm',
+      'Zones de couchage indépendantes',
+    ],
+    specs: [
+      { label: 'Tailles', value: PRO_SIZES },
+      { label: 'Composition', value: 'Viscoélastique 50 kg/m³ (3 cm) · Supersoft 32 kg/m³ (5 cm) · Mousse HR 37 kg/m³ (13 cm) · Base 3D antidérapante' },
+    ],
+  },
+  {
+    slug: 'matelas-protec',
+    name: 'Matelas Protec',
+    category: 'matelas',
+    summary: 'Hygiène avancée UV Clean et noyau 3 couches. Série Pro.',
+    description: [
+      'Le matelas Protec est conçu pour un sommeil sain, confortable et sûr. Il associe des matériaux de grande qualité à une technologie de protection hygiénique avancée.',
+      'Exposé à la lumière naturelle, son tissu traité par photocatalyse s’active et élimine bactéries, virus et champignons, pour un matelas assaini en continu.',
+    ],
+    features: ['Traitement UV Clean', 'Noyau 3 couches', 'Housse intérieure de protection'],
+    specs: [
+      { label: 'Tailles', value: PRO_SIZES },
+      { label: 'Composition', value: 'Supersoft 32 kg/m³ (5 cm) · Mousse HR 28 kg/m³ (15 cm) · Bloc profilé HR 25 kg/m³ (4 cm) · Base 3D antidérapante' },
+    ],
+  },
+  {
+    slug: 'matelas-ritz',
+    name: 'Matelas Ritz',
+    category: 'matelas',
+    summary: 'Le matelas de la collection hôtelière.',
+    description: [
+      'Développé selon les exigences de l’hôtellerie de luxe, le matelas Ritz allie confort, durabilité et raffinement. Sa structure renforcée assure un soutien uniforme, ses couches de confort une grande douceur.',
+      'Pensé pour un usage intensif, il est habillé d’un tissu raffiné, doux au toucher.',
+    ],
+    features: ['1 200 ressorts ensachés emboîtés', 'Accueil viscoélastique', 'Collection hôtelière'],
+    specs: [
+      { label: 'Tailles', value: MATTRESS_SIZES },
+      { label: 'Composition', value: 'Stretch 380 g/m² · Supersoft (2 cm) · Viscoélastique 50 kg/m³ (3 cm) · Mousse HR (4 cm) · Ressorts ensachés 17 cm' },
+    ],
+  },
+  {
+    slug: 'matelas-medic',
+    name: 'Matelas Medic',
+    category: 'matelas',
+    summary: 'Soutien ferme et ergonomique pour le dos.',
+    description: [
+      'Le matelas Medic est conçu pour ceux qui privilégient la santé et le bien-être au quotidien. Sa structure ferme et ergonomique soutient la colonne vertébrale, aide à garder un bon alignement et à prévenir les douleurs musculaires et lombaires.',
+    ],
+    features: ['Ressorts continus renforcés (15 cm)', 'Plaques de feutre', 'Soutien ferme'],
+    specs: [{ label: 'Tailles', value: MATTRESS_SIZES }],
+  },
+  {
+    slug: 'matelas-tourmaline',
+    name: 'Matelas Tourmaline',
+    category: 'matelas',
+    summary: 'Traitement aux particules de tourmaline.',
+    description: [
+      'Le matelas Tourmaline est conçu pour un repos profond et revigorant, grâce à la tourmaline, minéral reconnu pour ses propriétés énergisantes.',
+      'Son traitement exclusif agit au contact du corps, stimule la microcirculation et aide à réduire le stress et la fatigue accumulée.',
+    ],
+    features: ['Traitement à la tourmaline', 'Sommeil réparateur'],
+    specs: [{ label: 'Tailles', value: PRO_SIZES }],
+  },
+  {
+    slug: 'matelas-bionatura',
+    name: 'Matelas Bionatura',
+    category: 'matelas',
+    summary: 'Fibres naturelles, frais et respirant.',
+    description: [
+      'Le matelas Bionatura s’adresse à ceux qui recherchent un repos naturel, équilibré et durable. Ses fibres naturelles soigneusement sélectionnées offrent fraîcheur, douceur et respirabilité.',
+      'Ses couches écologiques assurent une ventilation constante, régulent l’humidité et préviennent les allergies.',
+    ],
+    features: ['Fibres naturelles', '830 ressorts ensachés (20 cm)', 'Accueil viscoélastique'],
+    specs: [{ label: 'Tailles', value: MATTRESS_SIZES }],
+  },
+  {
+    slug: 'matelas-premium',
+    name: 'Matelas Premium',
+    category: 'matelas',
+    summary: 'Ressorts ensachés et mémoire de forme.',
+    description: [
+      'Le matelas Premium allie matériaux de grande qualité et technologie de confort avancée. Sa composition équilibrée assure soutien, durabilité et bien-être toute la nuit.',
+    ],
+    features: ['780 ressorts ensachés (160×200)', 'Mousse à mémoire de forme', 'Mousse haute densité'],
+    specs: [{ label: 'Tailles', value: MATTRESS_SIZES }],
+  },
+  {
+    slug: 'matelas-elegance',
+    name: 'Matelas Élégance',
+    category: 'matelas',
+    summary: 'Ressorts ensachés 5 zones et mémoire de forme.',
+    description: [
+      'Le matelas Élégance est créé pour ceux qui exigent le meilleur en confort et en qualité de sommeil. Ses ressorts ensachés indépendants offrent un soutien personnalisé et une totale liberté de mouvement.',
+      'Sa couche de mémoire de forme haute densité enveloppe le corps et soulage les points de pression.',
+    ],
+    features: ['Ressorts ensachés 5 zones', 'Mémoire de forme 50 kg/m³', 'Indépendance de couchage'],
+    specs: [{ label: 'Tailles', value: '90×190 · 140×190 · 140×200 · 160×200 · 180×200 · 200×200 cm' }],
+  },
+  {
+    slug: 'matelas-majestic',
+    name: 'Matelas Majestic',
+    category: 'matelas',
+    summary: 'Luxe, innovation et bien-être.',
+    description: [
+      'Le matelas Majestic représente l’équilibre entre luxe, innovation et bien-être. Il associe matériaux de grande qualité, finitions soignées et technologies de confort avancées.',
+    ],
+    features: ['Ressorts ensachés', 'Mémoire de forme 50 kg/m³ (3 cm)', 'Tissu stretch 380 g/m²'],
+    specs: [{ label: 'Tailles', value: '90×190 · 140×190 · 140×200 · 160×200 · 180×200 · 200×200 cm' }],
+  },
+  {
+    slug: 'matelas-max-confort',
+    name: 'Matelas Max Confort',
+    category: 'matelas',
+    summary: 'Surmatelas intégré, viscogel.',
+    description: [
+      'Le matelas Max Confort est conçu pour un repos optimal. Son surmatelas intégré et sa conception adaptée à chaque morphologie allient douceur, soutien et ergonomie.',
+    ],
+    features: ['Surmatelas intégré', 'Accueil viscogel', '830 ressorts ensachés (20 cm)'],
+    specs: [{ label: 'Tailles', value: MATTRESS_SIZES }],
+  },
+
+  // Oreillers
+  {
+    slug: 'oreiller-pro-s',
+    name: 'Oreiller Pro S',
+    category: 'oreillers',
+    summary: 'Technologie UV Clean, mousse viscoélastique.',
+    description: [
+      'L’oreiller Pro S incarne une nouvelle génération de confort et de protection. Sa technologie UV Clean s’active à la lumière du jour et élimine bactéries et micro-organismes, sans produits chimiques ni lavages fréquents.',
+    ],
+    features: ['Traitement UV Clean', 'Hypoallergénique', 'Thermorégulation'],
+    specs: [
+      { label: 'Dimensions', value: '60 × 40 cm' },
+      { label: 'Garnissage', value: '100 % mousse viscoélastique' },
+    ],
+  },
+  {
+    slug: 'oreiller-protec',
+    name: 'Oreiller Protec',
+    category: 'oreillers',
+    summary: 'Hygiène avancée et confort supérieur.',
+    description: [
+      'L’oreiller Protec allie confort supérieur et hygiène avancée. Son traitement UV Clean s’active à la lumière du jour et élimine bactéries, virus et champignons.',
+    ],
+    features: ['Traitement UV Clean', 'Hypoallergénique', 'Effet rafraîchissant'],
+    specs: [
+      { label: 'Dimensions', value: '60 × 40 cm' },
+      { label: 'Garnissage', value: '100 % mousse viscoélastique' },
+    ],
+  },
+  {
+    slug: 'oreiller-cooling',
+    name: 'Oreiller Cooling',
+    category: 'oreillers',
+    summary: 'Mémoire de forme et gel rafraîchissant.',
+    description: [
+      'Le Cooling associe la mousse à mémoire de forme à la fraîcheur du visco-gel, pour des nuits plus fraîches. Le gel thermorégulateur dissipe la chaleur et maintient une température stable.',
+      'Sa structure épouse la nuque et la tête pour un bon alignement cervical, et réagit instantanément aux mouvements.',
+    ],
+    features: ['Gel thermorégulateur', 'Mémoire de forme', 'Hypoallergénique'],
+    specs: [{ label: 'Dimensions', value: '60 × 40 cm' }],
+  },
+  {
+    slug: 'oreiller-ergonomique',
+    name: 'Oreiller ergonomique',
+    category: 'oreillers',
+    summary: 'Forme ergonomique pour l’alignement cervical.',
+    description: [
+      'L’oreiller ergonomique équilibre confort et soutien en épousant les courbes de la nuque et de la tête. Il favorise l’alignement cervical et prévient les tensions musculaires.',
+    ],
+    features: ['Fibre polyester 100 % recyclée', 'Lavable en machine', 'Idéal pour dormir sur le côté'],
+    specs: [
+      { label: 'Dimensions', value: '70 × 40 cm' },
+      { label: 'Tailles', value: 'Petit · Moyen · Grand' },
+    ],
+  },
+  {
+    slug: 'oreiller-ritz',
+    name: 'Oreiller Ritz',
+    category: 'oreillers',
+    summary: 'Duvet d’oie, standards hôteliers.',
+    description: [
+      'Confort et raffinement se rencontrent dans cet oreiller conçu pour les standards hôteliers. Garni de duvet d’oie de grande qualité, il offre douceur et soutien équilibré.',
+      'Son enveloppe en coton 200 fils est douce au toucher et pensée pour un usage intensif.',
+    ],
+    features: ['100 % duvet d’oie', 'Coton 200 fils', 'Collection hôtelière'],
+    specs: [
+      { label: 'Dimensions', value: '70 × 50 cm' },
+      { label: 'Coloris', value: 'Blanc · Violet' },
+    ],
+  },
+
+  // Lits articulés
+  {
+    slug: 'lit-zurich',
+    name: 'Lit Zurich',
+    category: 'lits',
+    summary: 'Sommier articulé cinq plans, double moteur.',
+    description: [
+      'Lit articulé à structure renforcée, très résistant et facile d’entretien. Ses plans d’articulation supportent le poids même lorsque le relève-pieds est levé.',
+      'Ses lattes en hêtre naturel, montées sur doubles supports oscillants, s’adaptent à chaque morphologie.',
+    ],
+    features: ['Cinq plans articulés', 'Double moteur, télécommande sans fil', 'Lattes en hêtre', 'Cadre en tube d’acier'],
+    specs: [{ label: 'Tailles', value: '70×190 · 70×200 · 80×200 · 90×200 cm' }],
+  },
+  {
+    slug: 'lit-omega',
+    name: 'Lit Omega',
+    category: 'lits',
+    summary: 'Lit articulé en bois massif.',
+    description: [
+      'Lit articulé à structure en bois massif, très résistant et facile d’entretien. Son sommier renforcé et ses plans d’articulation supportent le poids même relève-pieds levé.',
+    ],
+    features: ['Bois massif', 'Sommier renforcé', 'Hauteur 34 cm'],
+    specs: [
+      { label: 'Tailles', value: '70×190 · 70×200 · 80×200 · 90×200 cm' },
+      { label: 'Finition', value: 'Cambrian' },
+    ],
+  },
+
+  // Massage
+  {
+    slug: 'fauteuil-easy',
+    name: 'Fauteuil de massage Easy',
+    category: 'massage',
+    summary: 'Gravité zéro, chauffage lombaire et enceintes Bluetooth.',
+    description: [
+      'Le fauteuil Easy transforme la détente en une expérience de confort et de technologie. Son chauffage procure une relaxation enveloppante et ses enceintes Bluetooth diffusent votre musique.',
+      'La commande vocale le rend intuitif, et la position gravité zéro soulage la colonne vertébrale.',
+    ],
+    features: ['Gravité zéro', 'Chauffage lombaire', 'Enceintes Bluetooth', 'Commande vocale', 'Fonction étirement', 'Airbags hanches, mollets et pieds'],
+  },
+  {
+    slug: 'fauteuil-gravity',
+    name: 'Fauteuil de massage Gravity',
+    category: 'massage',
+    summary: 'Body scan intelligent et technologie airbag.',
+    description: [
+      'Un fauteuil de luxe au massage personnalisable : son body scan intelligent ajuste le massage aux points de pression et aux groupes musculaires de chacun.',
+      'Ses airbags favorisent la circulation et soulagent les raideurs, et la position gravité zéro procure une relaxation profonde.',
+    ],
+    features: ['Body scan intelligent', 'Technologie airbag', 'Gravité zéro'],
+  },
+  {
+    slug: 'masseur-pieds',
+    name: 'Masseur jambes et pieds',
+    category: 'massage',
+    summary: 'Massage 3D des pieds, mollets et genoux, chauffant.',
+    description: [
+      'Ce masseur offre un massage 3D des jambes, des mollets, des pieds et des genoux. Il dispose d’une fonction chauffante, de trois vitesses et d’un programme prédéfini, réglables depuis la télécommande intégrée.',
+    ],
+    features: ['Massage 3D', 'Chauffage en fibre de carbone', 'Module genoux pivotant à 110°', 'Trois vitesses'],
+  },
+  {
+    slug: 'masseur-yeux-irest',
+    name: 'Masseur oculaire iRest',
+    category: 'massage',
+    summary: 'Vibrations, chaleur et sons de la nature.',
+    description: [
+      'Le masseur oculaire iRest combine vibrations douces, airbags et chaleur apaisante pour reposer les yeux fatigués et soulager les tensions.',
+      'Son haut-parleur diffuse des sons de la nature, ou votre propre musique.',
+    ],
+    features: ['Massage par vibrations et airbags', 'Thermothérapie', 'Musicothérapie'],
+  },
+
+  // Entretien
+  {
+    slug: 'spray-protecteur',
+    name: 'Protect Spray',
+    category: 'entretien',
+    summary: 'Protège les tissus et élimine les acariens.',
+    description: [
+      'Protect Spray crée une barrière invisible et respirante qui repousse l’eau, la graisse et les taches, sans altérer la couleur ni la texture du tissu. Il élimine aussi les acariens.',
+      'Idéal pour canapés, chaises, rideaux et intérieurs de voiture, notamment avec des enfants ou des animaux.',
+    ],
+  },
+  {
+    slug: 'spray-nettoyant',
+    name: 'Clean Spray',
+    category: 'entretien',
+    summary: 'Détachant pour tous les tissus, sans rinçage.',
+    description: [
+      'Clean Spray élimine tout type de tache sur les tissus, rapidement et sans les abîmer ni altérer leurs couleurs. Pour canapés, rideaux, sièges de voiture et autres tissus.',
+    ],
+    features: ['Élimine les taches tenaces', 'Sans danger pour tous les tissus', 'Sans rinçage'],
+  },
+];
+
+// ---------------------------------------------------------------------------
+// Belgique — KingPur (fauteuils massants)
+// ---------------------------------------------------------------------------
+
+const KINGPUR: Product[] = [
+  {
+    slug: 'sunshine',
+    cover: 3,
+    name: 'Sunshine',
+    category: 'fauteuils-massants',
+    summary: '20 programmes automatiques, massage 4D et intelligence artificielle.',
+    description: [
+      'Le Sunshine propose 20 programmes automatiques répartis en quatre familles : massage famille, relaxation active, programmes I.A et relaxation totale.',
+      'Son mécanisme 4D à huit rouleaux, sur double rail SL de 120 cm, suit les courbes du corps de la nuque aux jambes. L’intelligence artificielle adapte l’intensité et les techniques à la morphologie et à l’état des muscles.',
+    ],
+    features: [
+      'Massage 4D, 8 rouleaux',
+      'Rail SL de 120 cm',
+      'Programmes I.A',
+      'Airbags sur tout le corps, 5 niveaux',
+      'Gravité zéro (153° à 163°)',
+      'Commande vocale et écran tactile',
+    ],
+    specs: [
+      { label: 'Coloris', value: 'Noir · Champagne' },
+      { label: 'Poids', value: '116,5 kg' },
+      { label: 'Alimentation', value: '220 V · 150 W' },
+    ],
+  },
+  {
+    slug: 'samourai',
+    cover: 6,
+    name: 'Samouraï',
+    category: 'fauteuils-massants',
+    summary: 'Massage automatique, Bluetooth, charge sans fil et 16 airbags.',
+    description: [
+      'Le Samouraï lance d’une simple touche un massage complet, de la nuque aux jambes : pétrissage, massage et tapotement s’enchaînent selon les principes de l’ergonomie.',
+      'Il est pensé pour la vie de tous les jours : support de téléphone, musique Bluetooth, raccourcis, port USB et charge sans fil.',
+    ],
+    features: ['16 airbags', 'Rail SL de 120 cm', 'Écran LCD', 'Musique Bluetooth', 'Charge sans fil et USB'],
+    specs: [
+      { label: 'Dimensions', value: '140 × 72 × 104 cm' },
+      { label: 'Largeur d’assise', value: '53 cm' },
+      { label: 'Coloris', value: 'Blanc · Bleu · Bois' },
+      { label: 'Poids', value: '67 kg' },
+    ],
+  },
+  {
+    slug: 'parme',
+    cover: 3,
+    name: 'Parme',
+    category: 'fauteuils-massants',
+    summary: 'Gravité zéro, body scan et mains robotiques 4D.',
+    description: [
+      'Le Parme offre un massage complet du corps en position d’apesanteur. Son body scan détecte votre taille et aligne précisément les rouleaux.',
+      'Son rail SL de 139 cm couvre de la nuque aux cuisses, et ses mains robotiques 4D reproduisent les gestes d’un thérapeute. Un écran tactile de 10,1 pouces donne accès à 48 programmes personnalisables.',
+    ],
+    features: [
+      'Mains robotiques 4D',
+      'Rail SL+ de 139 cm',
+      'Body scan',
+      'Écran tactile 10,1″',
+      'Détection des signes vitaux',
+      'Fonction mémoire',
+    ],
+    specs: [
+      { label: 'Dimensions', value: '165 × 78 × 115 cm' },
+      { label: 'Revêtement', value: 'Similicuir' },
+      { label: 'Coloris', value: 'Bleu · Camel · Vert' },
+      { label: 'Poids', value: '110 kg' },
+    ],
+  },
+  {
+    slug: 'venise',
+    cover: 4,
+    name: 'Venise',
+    category: 'fauteuils-massants',
+    summary: 'Massage de la tête aux pieds, 7 programmes, audio Bluetooth.',
+    description: [
+      'Le Venise masse de la tête aux pieds. Il associe 7 programmes automatiques, de la détente à la récupération sportive, et 6 techniques manuelles : pétrissage, tapotement, shiatsu…',
+      'Laissez-vous guider ou composez votre massage sur mesure. Option massage 3D.',
+    ],
+    features: ['7 programmes automatiques', '6 techniques manuelles', 'Audio Bluetooth', 'Repose-pieds extensible', 'Port USB'],
+    specs: [
+      { label: 'Coloris', value: 'Gris · Noir' },
+      { label: 'Alimentation', value: '220 V · 100 W' },
+    ],
+  },
+];
+
+// ---------------------------------------------------------------------------
+
+export const COUNTRIES: Country[] = [
+  {
+    slug: 'portugal',
+    name: 'Portugal',
+    code: 'PT',
+    brand: 'Cheers',
+    brandKey: 'cheers',
+    specialty: 'Canapés et fauteuils relax',
+    place: 'Pinhal Novo, Portugal',
+    tagline: 'L’art de la détente.',
+    intro: [
+      'Depuis près de vingt ans, Cheers conçoit et fabrique au Portugal des canapés où beauté, qualité et confort vont de pair.',
+      'Chaque collection suit les tendances et l’innovation, du choix des cuirs et des tissus jusqu’aux mécanismes relax, testés pour durer.',
+    ],
+    facts: [
+      { value: 'Près de 20 ans', label: 'de fabrication au Portugal' },
+      { value: '260 000', label: 'cycles testés par mécanisme' },
+      { value: '5 ans', label: 'de garantie sur le mécanisme breveté' },
+    ],
+    visual: { product: 'meridienne-51698', index: 1, position: '38% 60%' },
+    frame: { ratio: '4 / 3', fit: 'cover' },
+    categories: [
+      { slug: 'angles', title: 'Canapés d’angle', intro: 'De la place pour toute la famille.' },
+      { slug: 'meridiennes', title: 'Canapés avec méridienne', intro: 'S’allonger sans quitter le salon.' },
+      { slug: 'canapes', title: 'Canapés et ensembles', intro: 'Canapés seuls et ensembles 3 + 2.' },
+      { slug: 'fauteuils', title: 'Fauteuils', intro: 'Relax, pivotants, releveurs.' },
+      { slug: 'entretien', title: 'Entretien', intro: 'Pour garder vos tissus comme neufs.' },
+    ],
+    products: CHEERS,
+  },
+  {
+    slug: 'suisse',
+    name: 'Suisse',
+    code: 'CH',
+    brand: 'Swiss Forme',
+    brandKey: 'swiss-forme',
+    specialty: 'Literie et massage',
+    place: 'Zurich, Suisse',
+    tagline: 'Quand le sommeil rencontre l’excellence suisse.',
+    intro: [
+      'Swiss Forme conçoit des matelas, oreillers et lits articulés qui allient technologie, ergonomie et matériaux de pointe.',
+      'Sa Série Pro favorise la récupération musculaire et un sommeil profond ; sa collection hôtelière répond aux exigences des plus beaux établissements.',
+    ],
+    facts: [
+      { value: 'UV Clean', label: 'tissus assainis à la lumière du jour' },
+      { value: 'Série Pro', label: 'vibromassage et récupération' },
+      { value: 'Hôtellerie', label: 'une collection pour le luxe' },
+    ],
+    visual: { product: 'lit-omega', index: 1, position: '42% 60%' },
+    frame: { ratio: '1 / 1', fit: 'contain' },
+    categories: [
+      { slug: 'matelas', title: 'Matelas', intro: 'Ressorts ensachés, mousses techniques, Série Pro.' },
+      { slug: 'oreillers', title: 'Oreillers', intro: 'Soutien cervical et fraîcheur.' },
+      { slug: 'lits', title: 'Lits articulés', intro: 'Plans réglables et double moteur.' },
+      { slug: 'massage', title: 'Massage', intro: 'Fauteuils et appareils de massage.' },
+      { slug: 'entretien', title: 'Entretien', intro: 'Protéger et nettoyer les tissus.' },
+    ],
+    products: SWISS,
+  },
+  {
+    slug: 'belgique',
+    name: 'Belgique',
+    code: 'BE',
+    brand: 'KingPur',
+    brandKey: 'kingpur',
+    specialty: 'Fauteuils massants',
+    place: 'Belgique et France',
+    tagline: 'L’excellence du bien-être a un nom.',
+    intro: [
+      'Spécialiste du fauteuil massant en Belgique et en France, KingPur sélectionne des modèles haut de gamme pour leur technologie et leur design.',
+      'Body scan, gravité zéro, massage 4D : chaque fauteuil adapte le rythme et l’intensité du massage à votre corps.',
+    ],
+    facts: [
+      { value: '4D', label: 'massage robotisé' },
+      { value: 'Gravité zéro', label: 'pour une détente profonde' },
+      { value: 'Body scan', label: 'adapté à votre morphologie' },
+    ],
+    visual: { product: 'samourai', index: 6, position: '50% 60%' },
+    frame: { ratio: '4 / 5', fit: 'cover' },
+    categories: [{ slug: 'fauteuils-massants', title: 'Fauteuils massants', intro: 'Quatre modèles, du compact au haut de gamme.' }],
+    products: KINGPUR,
+  },
+];
+
+// ---------------------------------------------------------------------------
+
+const MANIFEST = IMAGES as unknown as Record<string, [number, number][]>;
+
+function image(key: string, i: number, [width, height]: [number, number]): ProductImage {
+  const base = `/catalogue/${key}-${i + 1}`;
+  return { src: `${base}-1280.webp`, srcSet: `${base}-640.webp 640w, ${base}-1280.webp ${width}w`, width, height };
+}
+
+/** Photos du produit, la photo de couverture en premier. */
+export function productImages(country: Country, product: Product): ProductImage[] {
+  const key = `${country.brandKey}/${product.slug}`;
+  const list = (MANIFEST[key] ?? []).map((size, i) => image(key, i, size));
+  const first = (product.cover ?? 1) - 1;
+  return first > 0 && first < list.length ? [list[first], ...list.filter((_, i) => i !== first)] : list;
+}
+
+export function countryVisual(country: Country): ProductImage {
+  const { product, index } = country.visual;
+  const key = `${country.brandKey}/${product}`;
+  return image(key, index - 1, MANIFEST[key][index - 1]);
+}
+
+export function getCountry(slug: string) {
+  return COUNTRIES.find((c) => c.slug === slug);
+}
+
+export function getProduct(countrySlug: string, productSlug: string) {
+  const country = getCountry(countrySlug);
+  const product = country?.products.find((p) => p.slug === productSlug);
+  return country && product ? { country, product } : undefined;
+}
+
+export function productsByCategory(country: Country) {
+  return country.categories
+    .map((category) => ({ category, products: country.products.filter((p) => p.category === category.slug) }))
+    .filter((g) => g.products.length > 0);
+}
+
+export const PRODUCT_COUNT = COUNTRIES.reduce((n, c) => n + c.products.length, 0);

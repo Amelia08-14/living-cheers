@@ -7,7 +7,10 @@ const SITE_URL = 'https://livingcheers.groupevelmont.ca';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Living Cheers | Meubles, salons et confort — site en construction',
+  title: {
+    default: 'Living Cheers | Meubles, salons et confort — site en construction',
+    template: '%s | Living Cheers',
+  },
   description:
     'Le site de Living Cheers est en construction. Meubles, salons et confort au Place Bathurst Mall, à Bathurst. Un chez-vous qui vous ressemble.',
   openGraph: {

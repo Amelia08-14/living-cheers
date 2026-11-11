@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
 import Pic from './Pic';
+import SiteHeader from './SiteHeader';
 import { SITE } from '@/lib/site';
 import styles from './Hero.module.css';
 
@@ -8,15 +9,7 @@ const delay = (s: number) => ({ '--d': `${s}s` }) as CSSProperties;
 export default function Hero() {
   return (
     <>
-      <header className={styles.header}>
-        <a href="#top" className={styles.brand} aria-label="Living Cheers, haut de page">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/logo-ink.png" width={630} height={220} alt="Living Cheers" />
-        </a>
-        <a className={styles.tel} href={SITE.phoneHref}>
-          {SITE.phone}
-        </a>
-      </header>
+      <SiteHeader overlay />
 
       <section id="top" className={styles.hero}>
         <div className={styles.copy}>

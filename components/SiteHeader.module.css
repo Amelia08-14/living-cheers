@@ -1,0 +1,85 @@
+.header {
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px var(--gutter);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0 0 auto 0;
+}
+
+.bar {
+  position: relative;
+  max-width: var(--maxw);
+  margin-inline: auto;
+}
+
+.brand {
+  flex: none;
+}
+
+.brand img {
+  width: clamp(96px, 14vw, 150px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 36px);
+}
+
+.link {
+  position: relative;
+  padding: 10px 0;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+.tel {
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 10px 2px;
+  border-bottom: 1px solid var(--gold);
+  transition: color 0.25s;
+}
+
+.tel:hover {
+  color: var(--gold-deep);
+}
+
+@media (max-width: 560px) {
+  .wide {
+    display: none;
+  }
+
+  .tel {
+    font-size: 0.85rem;
+  }
+}
