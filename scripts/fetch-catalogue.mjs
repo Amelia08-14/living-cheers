@@ -1,13 +1,13 @@
 // Télécharge les photos produits des fournisseurs (voir scripts/catalogue-sources.json),
-// les convertit en WebP (640 et 1280 px) dans public/catalogue/<pays>/
+// les convertit en WebP (640 et 1280 px) dans public/catalogue/produits/
 // et écrit lib/catalogue-images.json (dimensions, pour éviter les sauts de mise en page).
 // À relancer seulement si le catalogue change :
 //   npm run catalogue
 import sharp from 'sharp';
 import { mkdir, readFile, writeFile, access } from 'node:fs/promises';
 
-const SRC = 'assets-src/catalogue';
-const OUT = 'public/catalogue';
+const SRC = 'assets-src/catalogue/produits';
+const OUT = 'public/catalogue/produits';
 const sources = JSON.parse(await readFile('scripts/catalogue-sources.json', 'utf8'));
 const manifest = {};
 
@@ -27,13 +27,13 @@ async function download(url, file) {
   throw new Error(`Échec du téléchargement : ${url}`);
 }
 
-async function processProduct({ country, slug, images }) {
-  await mkdir(`${SRC}/${country}`, { recursive: true });
-  await mkdir(`${OUT}/${country}`, { recursive: true });
+async function processProduct({ slug, images }) {
+  await mkdir(SRC, { recursive: true });
+  await mkdir(OUT, { recursive: true });
   const list = [];
   for (const [i, url] of images.entries()) {
     const n = i + 1;
-    const buf = await download(url, `${SRC}/${country}/${slug}-${n}`);
+    const buf = await download(url, `${SRC}/${slug}-${n}`);
     // Fond blanc sous les PNG transparents.
     const base = sharp(buf).rotate().flatten({ background: '#ffffff' });
     let size;
@@ -42,13 +42,13 @@ async function processProduct({ country, slug, images }) {
         .clone()
         .resize({ width: w, withoutEnlargement: true })
         .webp({ quality: 76 })
-        .toFile(`${OUT}/${country}/${slug}-${n}-${w}.webp`);
+        .toFile(`${OUT}/${slug}-${n}-${w}.webp`);
       if (w === 1280) size = [info.width, info.height];
     }
     list.push(size);
   }
-  manifest[`${country}/${slug}`] = list;
-  console.log(`${country}/${slug} : ${list.length} photo(s)`);
+  manifest[`produits/${slug}`] = list;
+  console.log(`${slug} : ${list.length} photo(s)`);
 }
 
 // Quelques produits à la fois, pour ne pas surcharger les serveurs des fournisseurs.

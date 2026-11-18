@@ -1,0 +1,10 @@
+:HL["/_next/static/chunks/1rt4uszfzfxsl.css","style"]
+:HC["/",""]
+:HL["/_next/static/chunks/1atp8pji0xv89.css","style"]
+:HL["/images/logo-ink.png","image"]
+:HL["/images/logo-light.png","image"]
+4:[["children",{"s":"__PAGE__","h":160}]]
+3:[["children",{"s":{"n":"produit","t":"d","k":"fauteuil-lazy","s":[]},"h":65632,"c":"$Q4"}]]
+2:[["children",{"s":{"n":"catalogue","t":"d","k":"3","s":[]},"h":196704,"c":"$Q3"}]]
+1:[["children",{"s":"catalogue","h":131168,"c":"$Q2"}]]
+0:{"b":"Kgxo-rA2-llcI6-oDIV_H","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}

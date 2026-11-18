@@ -3,15 +3,15 @@ import Link from 'next/link';
 import SiteHeader from '@/components/SiteHeader';
 import SiteFooter from '@/components/SiteFooter';
 import Reveal from '@/components/Reveal';
-import CountryArch from '@/components/catalogue/CountryArch';
+import CatalogueArch from '@/components/catalogue/CatalogueArch';
 import ProductCard from '@/components/catalogue/ProductCard';
-import { COUNTRIES, PRODUCT_COUNT, productsByCategory } from '@/lib/catalogue';
+import { CATALOGUES, PRODUCT_COUNT, productsByCategory } from '@/lib/catalogue';
 import styles from './catalogue.module.css';
 
 export const metadata: Metadata = {
-  title: 'Catalogue par pays',
+  title: 'Nos catalogues',
   description:
-    'Le catalogue Living Cheers par pays : canapés et fauteuils du Portugal, literie de Suisse et fauteuils massants de Belgique.',
+    'Les 3 catalogues Living Cheers : canapés d’angle et méridiennes, canapés et ensembles, fauteuils relax. Fabriqués au Portugal.',
   alternates: { canonical: '/catalogue' },
 };
 
@@ -23,23 +23,23 @@ export default function CataloguePage() {
         <section className={`wrap ${styles.intro}`}>
           <p className="eyebrow">Catalogue · {PRODUCT_COUNT} modèles</p>
           <h1 className={styles.h1}>
-            Trois pays, <em>trois savoir-faire.</em>
+            Trois catalogues, <em>un même confort.</em>
           </h1>
           <p className={styles.lead}>
-            Living Cheers réunit des collections venues de trois pays d’Europe : les canapés relax du Portugal, la
-            literie suisse et les fauteuils massants de Belgique. Choisissez un pays pour parcourir sa collection.
+            Canapés d’angle, méridiennes, ensembles et fauteuils relax, fabriqués au Portugal. Choisissez un catalogue
+            pour parcourir ses modèles.
           </p>
         </section>
 
-        <section className={`wrap ${styles.countries}`} aria-label="Pays">
-          {COUNTRIES.map((c, i) => (
+        <section className={`wrap ${styles.countries}`} aria-label="Catalogues">
+          {CATALOGUES.map((c, i) => (
             <Reveal key={c.slug} delay={i * 0.1}>
-              <CountryArch country={c} as="h2" />
+              <CatalogueArch catalogue={c} as="h2" />
             </Reveal>
           ))}
         </section>
 
-        {COUNTRIES.map((c) => {
+        {CATALOGUES.map((c) => {
           // Un modèle par catégorie, pour donner un aperçu de la collection.
           const preview = productsByCategory(c)
             .map((g) => g.products[0])
@@ -67,7 +67,7 @@ export default function CataloguePage() {
                   {preview.map((p, i) => (
                     <li key={p.slug}>
                       <Reveal delay={i * 0.06}>
-                        <ProductCard country={c} product={p} />
+                        <ProductCard catalogue={c} product={p} />
                       </Reveal>
                     </li>
                   ))}

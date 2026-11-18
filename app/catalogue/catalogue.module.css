@@ -242,7 +242,7 @@
 .bannerTitle {
   margin-top: 10px;
   margin-left: -0.05em;
-  font-size: clamp(3.4rem, 13vw, 11rem);
+  font-size: clamp(2.8rem, 10.5vw, 8.6rem);
   font-weight: 200;
   line-height: 0.88;
   letter-spacing: -0.035em;

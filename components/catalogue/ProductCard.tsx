@@ -1,24 +1,24 @@
 import Link from 'next/link';
 import type { CSSProperties } from 'react';
-import { productImages, type Country, type Product } from '@/lib/catalogue';
+import { productImages, type Catalogue, type Product } from '@/lib/catalogue';
 import styles from './ProductCard.module.css';
 
 type Props = {
-  country: Country;
+  catalogue: Catalogue;
   product: Product;
   sizes?: string;
 };
 
-export default function ProductCard({ country, product, sizes = '(min-width: 1000px) 25vw, 50vw' }: Props) {
-  const [img] = productImages(country, product);
+export default function ProductCard({ catalogue, product, sizes = '(min-width: 1000px) 25vw, 50vw' }: Props) {
+  const [img] = productImages(product);
   const frame = {
-    '--ratio': country.frame.ratio,
-    '--fit': country.frame.fit,
+    '--ratio': catalogue.frame.ratio,
+    '--fit': catalogue.frame.fit,
   } as CSSProperties;
 
   return (
-    <Link href={`/catalogue/${country.slug}/${product.slug}`} className={styles.card}>
-      <div className={`${styles.frame} ${country.frame.fit === 'contain' ? styles.packshot : ''}`} style={frame}>
+    <Link href={`/catalogue/${catalogue.slug}/${product.slug}`} className={styles.card}>
+      <div className={`${styles.frame} ${catalogue.frame.fit === 'contain' ? styles.packshot : ''}`} style={frame}>
         {img && (
           // eslint-disable-next-line @next/next/no-img-element
           <img

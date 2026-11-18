@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react';
 import Link from 'next/link';
 import SiteHeader from './SiteHeader';
-import { COUNTRIES } from '@/lib/catalogue';
+import { CATALOGUES } from '@/lib/catalogue';
 import { heroImage, type HeroName } from '@/lib/hero';
 import { SITE } from '@/lib/site';
 import styles from './Hero.module.css';
@@ -46,8 +46,8 @@ export default function Hero() {
           Living Cheers
         </h1>
 
-        <ul className={`${styles.countries} ${styles.rise}`} style={delay(2.1)} aria-label="Collections par pays">
-          {COUNTRIES.map((c) => (
+        <ul className={`${styles.countries} ${styles.rise}`} style={delay(2.1)} aria-label="Catalogues">
+          {CATALOGUES.map((c) => (
             <li key={c.slug}>
               <Link href={`/catalogue/${c.slug}`}>{c.name}</Link>
             </li>

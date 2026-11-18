@@ -1,93 +1,5 @@
 {
- "belgique/parme": [
-  [
-   1023,
-   1338
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   1041,
-   1603
-  ]
- ],
- "belgique/samourai": [
-  [
-   888,
-   884
-  ],
-  [
-   1017,
-   1162
-  ],
-  [
-   1280,
-   1173
-  ],
-  [
-   1280,
-   1459
-  ],
-  [
-   1280,
-   1195
-  ],
-  [
-   1280,
-   1459
-  ]
- ],
- "belgique/sunshine": [
-  [
-   1010,
-   1147
-  ],
-  [
-   1024,
-   1024
-  ],
-  [
-   1280,
-   1472
-  ],
-  [
-   1280,
-   1393
-  ],
-  [
-   1280,
-   1399
-  ],
-  [
-   1280,
-   1123
-  ]
- ],
- "belgique/venise": [
-  [
-   1173,
-   1201
-  ],
-  [
-   713,
-   588
-  ],
-  [
-   805,
-   936
-  ],
-  [
-   1173,
-   1201
-  ],
-  [
-   904,
-   1058
-  ]
- ],
- "portugal/angle-11072": [
+ "produits/angle-11072": [
   [
    1280,
    842
@@ -105,7 +17,7 @@
    1280
   ]
  ],
- "portugal/angle-51727": [
+ "produits/angle-51727": [
   [
    1280,
    853
@@ -115,7 +27,7 @@
    853
   ]
  ],
- "portugal/angle-70785": [
+ "produits/angle-70785": [
   [
    1280,
    856
@@ -133,7 +45,7 @@
    793
   ]
  ],
- "portugal/angle-70829": [
+ "produits/angle-70829": [
   [
    1280,
    828
@@ -147,7 +59,7 @@
    1091
   ]
  ],
- "portugal/angle-7975": [
+ "produits/angle-7975": [
   [
    1280,
    853
@@ -161,7 +73,7 @@
    570
   ]
  ],
- "portugal/angle-80690": [
+ "produits/angle-80690": [
   [
    1280,
    853
@@ -175,7 +87,7 @@
    854
   ]
  ],
- "portugal/angle-9222": [
+ "produits/angle-9222": [
   [
    1280,
    651
@@ -189,7 +101,7 @@
    1276
   ]
  ],
- "portugal/angle-aqua": [
+ "produits/angle-aqua": [
   [
    1280,
    672
@@ -199,7 +111,7 @@
    1178
   ]
  ],
- "portugal/angle-aromo": [
+ "produits/angle-aromo": [
   [
    1280,
    910
@@ -217,7 +129,7 @@
    1280
   ]
  ],
- "portugal/angle-cloud": [
+ "produits/angle-cloud": [
   [
    1280,
    853
@@ -231,7 +143,7 @@
    853
   ]
  ],
- "portugal/angle-onix": [
+ "produits/angle-onix": [
   [
    1280,
    727
@@ -253,7 +165,7 @@
    213
   ]
  ],
- "portugal/canape-70785": [
+ "produits/canape-70785": [
   [
    564,
    335
@@ -267,7 +179,7 @@
    1082
   ]
  ],
- "portugal/canape-70829": [
+ "produits/canape-70829": [
   [
    1280,
    1091
@@ -281,7 +193,7 @@
    828
   ]
  ],
- "portugal/canape-cloud": [
+ "produits/canape-cloud": [
   [
    1280,
    976
@@ -291,7 +203,7 @@
    1024
   ]
  ],
- "portugal/canape-noosa": [
+ "produits/canape-noosa": [
   [
    1280,
    853
@@ -301,13 +213,13 @@
    853
   ]
  ],
- "portugal/cleaning-pro": [
+ "produits/cleaning-pro": [
   [
    960,
    1280
   ]
  ],
- "portugal/ensemble-1007": [
+ "produits/ensemble-1007": [
   [
    1280,
    625
@@ -329,7 +241,7 @@
    1280
   ]
  ],
- "portugal/ensemble-2027": [
+ "produits/ensemble-2027": [
   [
    512,
    299
@@ -343,25 +255,25 @@
    1445
   ]
  ],
- "portugal/ensemble-51197": [
+ "produits/ensemble-51197": [
   [
    1280,
    853
   ]
  ],
- "portugal/ensemble-51197-duo": [
+ "produits/ensemble-51197-duo": [
   [
    692,
    388
   ]
  ],
- "portugal/ensemble-51651": [
+ "produits/ensemble-51651": [
   [
    702,
    357
   ]
  ],
- "portugal/ensemble-5277": [
+ "produits/ensemble-5277": [
   [
    1280,
    650
@@ -371,25 +283,25 @@
    650
   ]
  ],
- "portugal/ensemble-9222": [
+ "produits/ensemble-9222": [
   [
    1280,
    1006
   ]
  ],
- "portugal/ensemble-9939": [
+ "produits/ensemble-9939": [
   [
    1280,
    712
   ]
  ],
- "portugal/ensemble-dublin": [
+ "produits/ensemble-dublin": [
   [
    1280,
    853
   ]
  ],
- "portugal/fauteuil-1098": [
+ "produits/fauteuil-1098": [
   [
    763,
    696
@@ -399,7 +311,7 @@
    586
   ]
  ],
- "portugal/fauteuil-55189": [
+ "produits/fauteuil-55189": [
   [
    1024,
    1536
@@ -409,7 +321,7 @@
    1536
   ]
  ],
- "portugal/fauteuil-70785": [
+ "produits/fauteuil-70785": [
   [
    1280,
    1402
@@ -419,19 +331,19 @@
    1402
   ]
  ],
- "portugal/fauteuil-71093": [
+ "produits/fauteuil-71093": [
   [
    696,
    692
   ]
  ],
- "portugal/fauteuil-71099": [
+ "produits/fauteuil-71099": [
   [
    1024,
    1024
   ]
  ],
- "portugal/fauteuil-lazy": [
+ "produits/fauteuil-lazy": [
   [
    1024,
    1536
@@ -441,13 +353,13 @@
    1536
   ]
  ],
- "portugal/fauteuil-miami": [
+ "produits/fauteuil-miami": [
   [
    1024,
    1024
   ]
  ],
- "portugal/meridienne-51129": [
+ "produits/meridienne-51129": [
   [
    1280,
    853
@@ -461,13 +373,13 @@
    411
   ]
  ],
- "portugal/meridienne-51698": [
+ "produits/meridienne-51698": [
   [
    1280,
    853
   ]
  ],
- "portugal/meridienne-518": [
+ "produits/meridienne-518": [
   [
    1280,
    853
@@ -481,7 +393,7 @@
    852
   ]
  ],
- "portugal/meridienne-80581": [
+ "produits/meridienne-80581": [
   [
    1280,
    853
@@ -491,7 +403,7 @@
    590
   ]
  ],
- "portugal/meridienne-ankara": [
+ "produits/meridienne-ankara": [
   [
    1280,
    690
@@ -509,7 +421,7 @@
    1280
   ]
  ],
- "portugal/meridienne-berna": [
+ "produits/meridienne-berna": [
   [
    1280,
    749
@@ -527,7 +439,7 @@
    1280
   ]
  ],
- "portugal/meridienne-moon": [
+ "produits/meridienne-moon": [
   [
    1280,
    853
@@ -537,7 +449,7 @@
    853
   ]
  ],
- "portugal/meridienne-noosa": [
+ "produits/meridienne-noosa": [
   [
    1280,
    853
@@ -551,13 +463,13 @@
    791
   ]
  ],
- "portugal/meridienne-onix": [
+ "produits/meridienne-onix": [
   [
    1024,
    1024
   ]
  ],
- "portugal/meridienne-sydney": [
+ "produits/meridienne-sydney": [
   [
    1280,
    811
@@ -575,19 +487,19 @@
    1280
   ]
  ],
- "portugal/meridienne-zoy": [
+ "produits/meridienne-zoy": [
   [
    1280,
    853
   ]
  ],
- "portugal/protecting-spray": [
+ "produits/protecting-spray": [
   [
    960,
    1280
   ]
  ],
- "portugal/table-55165": [
+ "produits/table-55165": [
   [
    1024,
    1536
@@ -595,360 +507,6 @@
   [
    1024,
    1536
-  ]
- ],
- "suisse/fauteuil-easy": [
-  [
-   891,
-   727
-  ],
-  [
-   905,
-   503
-  ],
-  [
-   731,
-   670
-  ],
-  [
-   278,
-   356
-  ]
- ],
- "suisse/fauteuil-gravity": [
-  [
-   800,
-   800
-  ],
-  [
-   800,
-   800
-  ],
-  [
-   800,
-   800
-  ],
-  [
-   800,
-   800
-  ]
- ],
- "suisse/lit-omega": [
-  [
-   1111,
-   806
-  ]
- ],
- "suisse/lit-zurich": [
-  [
-   1128,
-   703
-  ]
- ],
- "suisse/masseur-pieds": [
-  [
-   1280,
-   1280
-  ],
-  [
-   1280,
-   1280
-  ],
-  [
-   1280,
-   1280
-  ]
- ],
- "suisse/masseur-yeux-irest": [
-  [
-   1200,
-   1200
-  ],
-  [
-   1200,
-   1200
-  ],
-  [
-   1200,
-   1200
-  ],
-  [
-   1200,
-   1200
-  ]
- ],
- "suisse/matelas-bionatura": [
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   960
-  ],
-  [
-   502,
-   506
-  ]
- ],
- "suisse/matelas-elegance": [
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ]
- ],
- "suisse/matelas-majestic": [
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   572,
-   533
-  ]
- ],
- "suisse/matelas-max-confort": [
-  [
-   1280,
-   960
-  ],
-  [
-   1280,
-   960
-  ],
-  [
-   1280,
-   960
-  ],
-  [
-   1280,
-   960
-  ]
- ],
- "suisse/matelas-medic": [
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   960
-  ]
- ],
- "suisse/matelas-premium": [
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   502,
-   506
-  ]
- ],
- "suisse/matelas-pro-s": [
-  [
-   968,
-   716
-  ],
-  [
-   968,
-   716
-  ],
-  [
-   1280,
-   1280
-  ],
-  [
-   1280,
-   960
-  ]
- ],
- "suisse/matelas-protec": [
-  [
-   1280,
-   1280
-  ],
-  [
-   1280,
-   1280
-  ],
-  [
-   1280,
-   1280
-  ],
-  [
-   1280,
-   1280
-  ]
- ],
- "suisse/matelas-ritz": [
-  [
-   1280,
-   960
-  ],
-  [
-   1280,
-   960
-  ],
-  [
-   1280,
-   960
-  ],
-  [
-   1280,
-   960
-  ]
- ],
- "suisse/matelas-tourmaline": [
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   853
-  ],
-  [
-   507,
-   267
-  ]
- ],
- "suisse/oreiller-cooling": [
-  [
-   960,
-   1280
-  ],
-  [
-   1280,
-   1280
-  ],
-  [
-   1280,
-   1280
-  ]
- ],
- "suisse/oreiller-ergonomique": [
-  [
-   960,
-   1280
-  ],
-  [
-   1280,
-   1280
-  ],
-  [
-   1280,
-   720
-  ]
- ],
- "suisse/oreiller-pro-s": [
-  [
-   1280,
-   1280
-  ],
-  [
-   1280,
-   1707
-  ]
- ],
- "suisse/oreiller-protec": [
-  [
-   1280,
-   853
-  ],
-  [
-   1280,
-   960
-  ]
- ],
- "suisse/oreiller-ritz": [
-  [
-   960,
-   1280
-  ],
-  [
-   1280,
-   1280
-  ],
-  [
-   320,
-   480
-  ]
- ],
- "suisse/spray-nettoyant": [
-  [
-   1280,
-   1280
-  ]
- ],
- "suisse/spray-protecteur": [
-  [
-   1280,
-   1280
   ]
  ]
 }

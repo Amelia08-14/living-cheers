@@ -12,6 +12,30 @@
       "priority": true,
       "statusCode": 308,
       "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    },
+    {
+      "source": "/catalogue/portugal/:slug(angle-.*|meridienne-.*)",
+      "destination": "/catalogue/1/:slug",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/catalogue/portugal(?:/(angle-.*|meridienne-.*))(?:/)?$"
+    },
+    {
+      "source": "/catalogue/portugal/:slug(canape-.*|ensemble-.*)",
+      "destination": "/catalogue/2/:slug",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/catalogue/portugal(?:/(canape-.*|ensemble-.*))(?:/)?$"
+    },
+    {
+      "source": "/catalogue/portugal/:slug(fauteuil-.*|table-.*|cleaning-pro|protecting-spray)",
+      "destination": "/catalogue/3/:slug",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/catalogue/portugal(?:/(fauteuil-.*|table-.*|cleaning-pro|protecting-spray))(?:/)?$"
+    },
+    {
+      "source": "/catalogue/:pays(portugal|suisse|belgique)/:rest*",
+      "destination": "/catalogue",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/catalogue(?:/(portugal|suisse|belgique))(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?(?:/)?$"
     }
   ],
   "headers": [],
@@ -23,21 +47,21 @@
   },
   "dynamicRoutes": [
     {
-      "page": "/catalogue/[pays]",
+      "page": "/catalogue/[catalogue]",
       "regex": "^/catalogue/([^/]+?)(?:/)?$",
       "routeKeys": {
-        "nxtPpays": "nxtPpays"
+        "nxtPcatalogue": "nxtPcatalogue"
       },
-      "namedRegex": "^/catalogue/(?<nxtPpays>[^/]+?)(?:/)?$"
+      "namedRegex": "^/catalogue/(?<nxtPcatalogue>[^/]+?)(?:/)?$"
     },
     {
-      "page": "/catalogue/[pays]/[produit]",
+      "page": "/catalogue/[catalogue]/[produit]",
       "regex": "^/catalogue/([^/]+?)/([^/]+?)(?:/)?$",
       "routeKeys": {
-        "nxtPpays": "nxtPpays",
+        "nxtPcatalogue": "nxtPcatalogue",
         "nxtPproduit": "nxtPproduit"
       },
-      "namedRegex": "^/catalogue/(?<nxtPpays>[^/]+?)/(?<nxtPproduit>[^/]+?)(?:/)?$"
+      "namedRegex": "^/catalogue/(?<nxtPcatalogue>[^/]+?)/(?<nxtPproduit>[^/]+?)(?:/)?$"
     }
   ],
   "staticRoutes": [

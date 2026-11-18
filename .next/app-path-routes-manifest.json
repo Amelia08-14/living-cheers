@@ -1,8 +1,8 @@
 {
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
-  "/catalogue/[pays]/[produit]/page": "/catalogue/[pays]/[produit]",
-  "/catalogue/[pays]/page": "/catalogue/[pays]",
+  "/catalogue/[catalogue]/[produit]/page": "/catalogue/[catalogue]/[produit]",
+  "/catalogue/[catalogue]/page": "/catalogue/[catalogue]",
   "/catalogue/page": "/catalogue",
   "/icon.svg/route": "/icon.svg",
   "/page": "/",

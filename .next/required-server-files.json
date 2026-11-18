@@ -338,7 +338,29 @@
     "turbopack": {
       "root": "/Users/mohamedchakibaissati/Documents/living-cheers"
     },
-    "distDirRoot": ".next"
+    "distDirRoot": ".next",
+    "_originalRedirects": [
+      {
+        "source": "/catalogue/portugal/:slug(angle-.*|meridienne-.*)",
+        "destination": "/catalogue/1/:slug",
+        "permanent": true
+      },
+      {
+        "source": "/catalogue/portugal/:slug(canape-.*|ensemble-.*)",
+        "destination": "/catalogue/2/:slug",
+        "permanent": true
+      },
+      {
+        "source": "/catalogue/portugal/:slug(fauteuil-.*|table-.*|cleaning-pro|protecting-spray)",
+        "destination": "/catalogue/3/:slug",
+        "permanent": true
+      },
+      {
+        "source": "/catalogue/:pays(portugal|suisse|belgique)/:rest*",
+        "destination": "/catalogue",
+        "permanent": true
+      }
+    ]
   },
   "appDir": "/Users/mohamedchakibaissati/Documents/living-cheers",
   "relativeAppDir": "",

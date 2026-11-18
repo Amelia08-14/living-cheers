@@ -22,7 +22,7 @@
       }
     }
   },
-  "/catalogue/[pays]/[produit]": {
+  "/catalogue/[catalogue]/[produit]": {
     "hints": 64,
     "slots": {
       "children": {
@@ -46,7 +46,7 @@
       }
     }
   },
-  "/catalogue/[pays]": {
+  "/catalogue/[catalogue]": {
     "hints": 64,
     "slots": {
       "children": {

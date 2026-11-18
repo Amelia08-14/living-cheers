@@ -7,9 +7,9 @@
     "static/chunks/0cz1d0mv5g_q7.js"
   ],
   "lowPriorityFiles": [
-    "static/plHS1q89uruzIie6cTWLM/_buildManifest.js",
-    "static/plHS1q89uruzIie6cTWLM/_ssgManifest.js",
-    "static/plHS1q89uruzIie6cTWLM/_clientMiddlewareManifest.js"
+    "static/Kgxo-rA2-llcI6-oDIV_H/_buildManifest.js",
+    "static/Kgxo-rA2-llcI6-oDIV_H/_ssgManifest.js",
+    "static/Kgxo-rA2-llcI6-oDIV_H/_clientMiddlewareManifest.js"
   ],
   "rootMainFiles": [
     "static/chunks/310vm2bl3xxpt.js",
@@ -64,7 +64,7 @@
         94553
       ]
     },
-    "/catalogue/[pays]/page": {
+    "/catalogue/[catalogue]/page": {
       "otherChunks": [
         "static/chunks/310vm2bl3xxpt.js",
         "static/chunks/1wnov70f88xjy.js",
@@ -75,7 +75,7 @@
         94553
       ]
     },
-    "/catalogue/[pays]/[produit]/page": {
+    "/catalogue/[catalogue]/[produit]/page": {
       "otherChunks": [
         "static/chunks/310vm2bl3xxpt.js",
         "static/chunks/1wnov70f88xjy.js",

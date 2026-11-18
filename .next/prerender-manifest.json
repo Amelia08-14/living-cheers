@@ -5,7 +5,7 @@
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 33551,
+      "htmlSize": 33560,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -62,7 +62,7 @@
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 11122,
+      "htmlSize": 11160,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -90,7 +90,7 @@
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 43853,
+      "htmlSize": 43623,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -114,11 +114,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/belgique": {
+    "/catalogue/1": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 29966,
+      "htmlSize": 59370,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -131,8 +131,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]",
-      "dataRoute": "/catalogue/belgique.rsc",
+      "srcRoute": "/catalogue/[catalogue]",
+      "dataRoute": "/catalogue/1.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -142,11 +142,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/belgique/parme": {
+    "/catalogue/1/angle-11072": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 26720,
+      "htmlSize": 28426,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -159,8 +159,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/belgique/parme.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/angle-11072.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -170,11 +170,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/belgique/samourai": {
+    "/catalogue/1/angle-51727": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 27871,
+      "htmlSize": 27509,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -187,8 +187,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/belgique/samourai.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/angle-51727.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -198,11 +198,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/belgique/sunshine": {
+    "/catalogue/1/angle-70785": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 28185,
+      "htmlSize": 28054,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -215,8 +215,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/belgique/sunshine.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/angle-70785.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -226,1099 +226,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/belgique/venise": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 26887,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/belgique/venise.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 97444,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]",
-      "dataRoute": "/catalogue/portugal.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/angle-11072": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 28568,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/angle-11072.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/angle-51727": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 27664,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/angle-51727.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/angle-70785": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 28196,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/angle-70785.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/angle-70829": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 28311,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/angle-70829.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/angle-7975": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 28008,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/angle-7975.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/angle-80690": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 27631,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/angle-80690.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/angle-9222": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 27609,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/angle-9222.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/angle-aqua": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 27278,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/angle-aqua.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/angle-aromo": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 28339,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/angle-aromo.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/angle-cloud": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 27467,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/angle-cloud.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/angle-onix": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 29041,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/angle-onix.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/canape-70785": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 27794,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/canape-70785.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/canape-70829": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 27655,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/canape-70829.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/canape-cloud": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 26972,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/canape-cloud.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/canape-noosa": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 26877,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/canape-noosa.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/cleaning-pro": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 26672,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/cleaning-pro.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/ensemble-1007": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 28263,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/ensemble-1007.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/ensemble-2027": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 27236,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/ensemble-2027.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/ensemble-51197": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 26753,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/ensemble-51197.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/ensemble-51197-duo": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 26899,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/ensemble-51197-duo.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/ensemble-51651": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 26540,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/ensemble-51651.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/ensemble-5277": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 26711,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/ensemble-5277.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/ensemble-9222": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 26286,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/ensemble-9222.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/ensemble-9939": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 26441,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/ensemble-9939.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/ensemble-dublin": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 26767,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/ensemble-dublin.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/fauteuil-1098": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 26067,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/fauteuil-1098.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/fauteuil-55189": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 26521,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/fauteuil-55189.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/fauteuil-70785": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 26898,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/fauteuil-70785.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/fauteuil-71093": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 25597,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/fauteuil-71093.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/fauteuil-71099": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 25780,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/fauteuil-71099.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/fauteuil-lazy": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 26835,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/fauteuil-lazy.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/fauteuil-miami": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 25703,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/fauteuil-miami.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/meridienne-51129": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 28190,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/meridienne-51129.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/meridienne-51698": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 26797,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/meridienne-51698.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/meridienne-518": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 27579,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/meridienne-518.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/meridienne-80581": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 27583,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/meridienne-80581.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/meridienne-ankara": {
-      "routeType": "page",
-      "response": "complete",
-      "compute": "static",
-      "htmlSize": 28349,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/meridienne-ankara.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/catalogue/portugal/meridienne-berna": {
+    "/catalogue/1/angle-70829": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
@@ -1335,8 +243,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/meridienne-berna.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/angle-70829.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1346,11 +254,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/portugal/meridienne-moon": {
+    "/catalogue/1/angle-7975": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 27125,
+      "htmlSize": 27853,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1363,8 +271,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/meridienne-moon.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/angle-7975.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1374,11 +282,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/portugal/meridienne-noosa": {
+    "/catalogue/1/angle-80690": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 27584,
+      "htmlSize": 27489,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1391,8 +299,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/meridienne-noosa.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/angle-80690.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1402,11 +310,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/portugal/meridienne-onix": {
+    "/catalogue/1/angle-9222": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 27138,
+      "htmlSize": 27467,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1419,8 +327,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/meridienne-onix.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/angle-9222.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1430,11 +338,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/portugal/meridienne-sydney": {
+    "/catalogue/1/angle-aqua": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 28651,
+      "htmlSize": 27136,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1447,8 +355,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/meridienne-sydney.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/angle-aqua.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1458,11 +366,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/portugal/meridienne-zoy": {
+    "/catalogue/1/angle-aromo": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 26424,
+      "htmlSize": 28197,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1475,8 +383,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/meridienne-zoy.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/angle-aromo.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1486,11 +394,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/portugal/protecting-spray": {
+    "/catalogue/1/angle-cloud": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 26736,
+      "htmlSize": 27325,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1503,8 +411,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/protecting-spray.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/angle-cloud.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1514,11 +422,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/portugal/table-55165": {
+    "/catalogue/1/angle-onix": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 27157,
+      "htmlSize": 28899,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1531,8 +439,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/portugal/table-55165.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/angle-onix.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1542,11 +450,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse": {
+    "/catalogue/1/meridienne-51129": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 64295,
+      "htmlSize": 28048,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1559,8 +467,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]",
-      "dataRoute": "/catalogue/suisse.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/meridienne-51129.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1570,11 +478,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/fauteuil-easy": {
+    "/catalogue/1/meridienne-51698": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 28542,
+      "htmlSize": 26642,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1587,8 +495,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/fauteuil-easy.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/meridienne-51698.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1598,11 +506,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/fauteuil-gravity": {
+    "/catalogue/1/meridienne-518": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 28194,
+      "htmlSize": 27463,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1615,8 +523,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/fauteuil-gravity.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/meridienne-518.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1626,11 +534,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/lit-omega": {
+    "/catalogue/1/meridienne-80581": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 25981,
+      "htmlSize": 27467,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1643,8 +551,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/lit-omega.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/meridienne-80581.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1654,11 +562,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/lit-zurich": {
+    "/catalogue/1/meridienne-ankara": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 26463,
+      "htmlSize": 28207,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1671,8 +579,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/lit-zurich.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/meridienne-ankara.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1682,11 +590,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/masseur-pieds": {
+    "/catalogue/1/meridienne-berna": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 27605,
+      "htmlSize": 28027,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1699,8 +607,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/masseur-pieds.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/meridienne-berna.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1710,11 +618,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/masseur-yeux-irest": {
+    "/catalogue/1/meridienne-moon": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 27982,
+      "htmlSize": 26983,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1727,8 +635,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/masseur-yeux-irest.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/meridienne-moon.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1738,11 +646,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/matelas-bionatura": {
+    "/catalogue/1/meridienne-noosa": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 28897,
+      "htmlSize": 27442,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1755,8 +663,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/matelas-bionatura.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/meridienne-noosa.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1766,11 +674,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/matelas-elegance": {
+    "/catalogue/1/meridienne-onix": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 28944,
+      "htmlSize": 26996,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1783,8 +691,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/matelas-elegance.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/meridienne-onix.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1794,11 +702,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/matelas-majestic": {
+    "/catalogue/1/meridienne-sydney": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 28869,
+      "htmlSize": 28496,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1811,8 +719,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/matelas-majestic.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/meridienne-sydney.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1822,11 +730,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/matelas-max-confort": {
+    "/catalogue/1/meridienne-zoy": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 27989,
+      "htmlSize": 26282,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1839,8 +747,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/matelas-max-confort.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/1/meridienne-zoy.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1850,11 +758,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/matelas-medic": {
+    "/catalogue/2": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 28101,
+      "htmlSize": 43745,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1867,8 +775,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/matelas-medic.rsc",
+      "srcRoute": "/catalogue/[catalogue]",
+      "dataRoute": "/catalogue/2.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1878,11 +786,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/matelas-premium": {
+    "/catalogue/2/canape-70785": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 27944,
+      "htmlSize": 27298,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1895,8 +803,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/matelas-premium.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/2/canape-70785.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1906,11 +814,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/matelas-pro-s": {
+    "/catalogue/2/canape-70829": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 29545,
+      "htmlSize": 27198,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1923,8 +831,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/matelas-pro-s.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/2/canape-70829.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1934,11 +842,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/matelas-protec": {
+    "/catalogue/2/canape-cloud": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 28987,
+      "htmlSize": 26502,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1951,8 +859,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/matelas-protec.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/2/canape-cloud.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1962,11 +870,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/matelas-ritz": {
+    "/catalogue/2/canape-noosa": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 28728,
+      "htmlSize": 26394,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1979,8 +887,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/matelas-ritz.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/2/canape-noosa.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1990,11 +898,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/matelas-tourmaline": {
+    "/catalogue/2/ensemble-1007": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 28840,
+      "htmlSize": 27793,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -2007,8 +915,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/matelas-tourmaline.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/2/ensemble-1007.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -2018,11 +926,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/oreiller-cooling": {
+    "/catalogue/2/ensemble-2027": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 27867,
+      "htmlSize": 26766,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -2035,8 +943,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/oreiller-cooling.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/2/ensemble-2027.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -2046,11 +954,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/oreiller-ergonomique": {
+    "/catalogue/2/ensemble-51197": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 27870,
+      "htmlSize": 26283,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -2063,8 +971,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/oreiller-ergonomique.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/2/ensemble-51197.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -2074,11 +982,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/oreiller-pro-s": {
+    "/catalogue/2/ensemble-51197-duo": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 27320,
+      "htmlSize": 26416,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -2091,8 +999,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/oreiller-pro-s.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/2/ensemble-51197-duo.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -2102,11 +1010,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/oreiller-protec": {
+    "/catalogue/2/ensemble-51651": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 27128,
+      "htmlSize": 26070,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -2119,8 +1027,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/oreiller-protec.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/2/ensemble-51651.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -2130,11 +1038,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/oreiller-ritz": {
+    "/catalogue/2/ensemble-5277": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 27789,
+      "htmlSize": 26215,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -2147,8 +1055,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/oreiller-ritz.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/2/ensemble-5277.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -2158,11 +1066,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/spray-nettoyant": {
+    "/catalogue/2/ensemble-9222": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 25867,
+      "htmlSize": 25803,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -2175,8 +1083,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/spray-nettoyant.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/2/ensemble-9222.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -2186,11 +1094,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/suisse/spray-protecteur": {
+    "/catalogue/2/ensemble-9939": {
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 25693,
+      "htmlSize": 25971,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -2203,8 +1111,344 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/catalogue/[pays]/[produit]",
-      "dataRoute": "/catalogue/suisse/spray-protecteur.rsc",
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/2/ensemble-9939.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/catalogue/2/ensemble-dublin": {
+      "routeType": "page",
+      "response": "complete",
+      "compute": "static",
+      "htmlSize": 26284,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/2/ensemble-dublin.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/catalogue/3": {
+      "routeType": "page",
+      "response": "complete",
+      "compute": "static",
+      "htmlSize": 40308,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/catalogue/[catalogue]",
+      "dataRoute": "/catalogue/3.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/catalogue/3/cleaning-pro": {
+      "routeType": "page",
+      "response": "complete",
+      "compute": "static",
+      "htmlSize": 26369,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/3/cleaning-pro.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/catalogue/3/fauteuil-1098": {
+      "routeType": "page",
+      "response": "complete",
+      "compute": "static",
+      "htmlSize": 25853,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/3/fauteuil-1098.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/catalogue/3/fauteuil-55189": {
+      "routeType": "page",
+      "response": "complete",
+      "compute": "static",
+      "htmlSize": 26294,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/3/fauteuil-55189.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/catalogue/3/fauteuil-70785": {
+      "routeType": "page",
+      "response": "complete",
+      "compute": "static",
+      "htmlSize": 26671,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/3/fauteuil-70785.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/catalogue/3/fauteuil-71093": {
+      "routeType": "page",
+      "response": "complete",
+      "compute": "static",
+      "htmlSize": 25409,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/3/fauteuil-71093.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/catalogue/3/fauteuil-71099": {
+      "routeType": "page",
+      "response": "complete",
+      "compute": "static",
+      "htmlSize": 25566,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/3/fauteuil-71099.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/catalogue/3/fauteuil-lazy": {
+      "routeType": "page",
+      "response": "complete",
+      "compute": "static",
+      "htmlSize": 26621,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/3/fauteuil-lazy.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/catalogue/3/fauteuil-miami": {
+      "routeType": "page",
+      "response": "complete",
+      "compute": "static",
+      "htmlSize": 25515,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/3/fauteuil-miami.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/catalogue/3/protecting-spray": {
+      "routeType": "page",
+      "response": "complete",
+      "compute": "static",
+      "htmlSize": 26459,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/3/protecting-spray.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/catalogue/3/table-55165": {
+      "routeType": "page",
+      "response": "complete",
+      "compute": "static",
+      "htmlSize": 26930,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/catalogue/[catalogue]/[produit]",
+      "dataRoute": "/catalogue/3/table-55165.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -2312,7 +1556,7 @@
     }
   },
   "dynamicRoutes": {
-    "/catalogue/[pays]": {
+    "/catalogue/[catalogue]": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -2325,7 +1569,7 @@
         }
       ],
       "routeRegex": "^/catalogue/([^/]+?)(?:/)?$",
-      "dataRoute": "/catalogue/[pays].rsc",
+      "dataRoute": "/catalogue/[catalogue].rsc",
       "fallback": false,
       "fallbackRootParams": [],
       "fallbackRouteParams": [],
@@ -2340,7 +1584,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/catalogue/[pays]/[produit]": {
+    "/catalogue/[catalogue]/[produit]": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -2353,7 +1597,7 @@
         }
       ],
       "routeRegex": "^/catalogue/([^/]+?)/([^/]+?)(?:/)?$",
-      "dataRoute": "/catalogue/[pays]/[produit].rsc",
+      "dataRoute": "/catalogue/[catalogue]/[produit].rsc",
       "fallback": false,
       "fallbackRootParams": [],
       "fallbackRouteParams": [],

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import LeafMark from './LeafMark';
-import { COUNTRIES } from '@/lib/catalogue';
+import { CATALOGUES } from '@/lib/catalogue';
 import { SITE } from '@/lib/site';
 import styles from './SiteFooter.module.css';
 
@@ -15,10 +15,10 @@ export default function SiteFooter() {
             <img src="/images/logo-light.png" width={630} height={220} alt="Living Cheers" className={styles.logo} />
             <p className={styles.tag}>{SITE.tagline}</p>
           </div>
-          <nav aria-label="Catalogue par pays">
+          <nav aria-label="Catalogues">
             <p className={styles.navTitle}>Catalogue</p>
             <ul className={styles.navList}>
-              {COUNTRIES.map((c) => (
+              {CATALOGUES.map((c) => (
                 <li key={c.slug}>
                   <Link href={`/catalogue/${c.slug}`}>
                     {c.name} <span>· {c.specialty}</span>

@@ -1,6 +1,6 @@
 [
   {
-    "route": "/catalogue/[pays]/[produit]",
+    "route": "/catalogue/[catalogue]/[produit]",
     "firstLoadUncompressedJsBytes": 466231,
     "firstLoadChunkPaths": [
       ".next/static/chunks/3qfy96eoyh-ek.js",
@@ -39,7 +39,7 @@
     ]
   },
   {
-    "route": "/catalogue/[pays]",
+    "route": "/catalogue/[catalogue]",
     "firstLoadUncompressedJsBytes": 465653,
     "firstLoadChunkPaths": [
       ".next/static/chunks/3qfy96eoyh-ek.js",

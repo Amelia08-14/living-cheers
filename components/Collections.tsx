@@ -1,19 +1,19 @@
 import Link from 'next/link';
 import Reveal from './Reveal';
-import CountryArch from './catalogue/CountryArch';
-import { COUNTRIES } from '@/lib/catalogue';
+import CatalogueArch from './catalogue/CatalogueArch';
+import { CATALOGUES } from '@/lib/catalogue';
 import styles from './Collections.module.css';
 
-// Accueil : les collections, par pays d'origine.
+// Accueil : les 3 catalogues.
 export default function Collections() {
   return (
     <section id="collections" className={styles.section}>
       <div className="wrap">
         <Reveal className={styles.head}>
           <div>
-            <p className="eyebrow">Nos collections</p>
+            <p className="eyebrow">Nos catalogues</p>
             <h2 className={styles.h2}>
-              Trois pays d’Europe, <em>un seul salon.</em>
+              Trois catalogues, <em>un seul salon.</em>
             </h2>
           </div>
           <Link href="/catalogue" className={styles.all}>
@@ -21,9 +21,9 @@ export default function Collections() {
           </Link>
         </Reveal>
         <div className={styles.grid}>
-          {COUNTRIES.map((c, i) => (
+          {CATALOGUES.map((c, i) => (
             <Reveal key={c.slug} delay={i * 0.1}>
-              <CountryArch country={c} />
+              <CatalogueArch catalogue={c} />
             </Reveal>
           ))}
         </div>

@@ -1,4 +1,4 @@
-// Photos plein écran (accueil et bandeaux des pages pays), à partir des photos
+// Photos plein écran (accueil et bandeaux des 3 catalogues), à partir des photos
 // téléchargées par `npm run catalogue` (assets-src/catalogue/).
 //   npm run hero
 import sharp from 'sharp';
@@ -9,12 +9,12 @@ const OUT = 'public/images/hero';
 
 // nom de sortie -> photo source
 const HERO = {
-  'accueil-1': 'portugal/canape-noosa-1',
-  'accueil-2': 'portugal/meridienne-noosa-1',
-  'accueil-3': 'portugal/meridienne-moon-1',
-  portugal: 'portugal/meridienne-51698-1',
-  suisse: 'suisse/lit-omega-1',
-  belgique: 'belgique/parme-2',
+  'accueil-1': 'produits/canape-noosa-1',
+  'accueil-2': 'produits/meridienne-noosa-1',
+  'accueil-3': 'produits/meridienne-moon-1',
+  'catalogue-1': 'produits/angle-80690-1',
+  'catalogue-2': 'produits/ensemble-51197-1',
+  'catalogue-3': 'produits/fauteuil-71099-1',
 };
 
 await mkdir(OUT, { recursive: true });

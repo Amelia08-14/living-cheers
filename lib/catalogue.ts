@@ -1,5 +1,5 @@
-// Catalogue par pays d'origine. Aucun nom de marque partenaire n'est affiché sur le site.
-// Textes repris des fiches fournisseurs (traduits du portugais pour le Portugal), sans prix.
+// Catalogue : canapés et fauteuils fabriqués au Portugal, répartis en 3 catalogues.
+// Aucun nom de marque partenaire n'est affiché sur le site. Textes traduits du portugais, sans prix.
 // Les photos sont générées par `npm run catalogue` (voir scripts/fetch-catalogue.mjs).
 import IMAGES from './catalogue-images.json';
 
@@ -19,17 +19,19 @@ export type Product = {
 
 export type Category = { slug: string; title: string; intro: string };
 
-export type Country = {
+export type Catalogue = {
+  /** Segment d'URL : /catalogue/1, /catalogue/2… */
   slug: string;
   name: string;
+  /** Numéro affiché dans la pastille (01, 02, 03). */
   code: string;
   specialty: string;
   tagline: string;
   intro: string[];
   facts: { value: string; label: string }[];
-  /** Photo d'ambiance du pays (arche) : produit, numéro de photo, cadrage. */
+  /** Photo de l'arche : produit, numéro de photo, cadrage. */
   visual: { product: string; index: number; position: string };
-  /** Cadrage des photos dans les vignettes : scène recadrée ou packshot entier. */
+  /** Cadrage des photos dans les vignettes. */
   frame: { ratio: string; fit: 'cover' | 'contain' };
   categories: Category[];
   products: Product[];
@@ -38,10 +40,10 @@ export type Country = {
 export type ProductImage = { src: string; srcSet: string; width: number; height: number };
 
 // ---------------------------------------------------------------------------
-// Portugal — canapés et fauteuils
+// Produits (fabriqués au Portugal)
 // ---------------------------------------------------------------------------
 
-const PORTUGAL: Product[] = [
+const PRODUCTS: Product[] = [
   // Canapés d'angle
   {
     slug: 'angle-80690',
@@ -606,478 +608,71 @@ const PORTUGAL: Product[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// Suisse — literie et massage
-// ---------------------------------------------------------------------------
 
-const MATTRESS_SIZES = '90×190 · 90×200 · 140×190 · 140×200 · 160×200 · 180×200 cm';
-const PRO_SIZES = '70×190 · 70×200 · 80×200 · 90×190 · 90×200 · 140×190 · 140×200 · 160×200 · 180×200 cm';
-
-const SUISSE: Product[] = [
-  // Matelas
-  {
-    slug: 'matelas-pro-s',
-    cover: 2,
-    name: 'Matelas Pro S',
-    category: 'matelas',
-    summary: 'Vibromassage intégré et traitement UV Clean. Série Pro.',
-    description: [
-      'Le Pro S est conçu pour ceux qui exigent davantage de leur corps et recherchent une récupération musculaire efficace. Sa couche supérieure profilée, associée au système de vibromassage intégré, procure une relaxation profonde et stimule la circulation.',
-      'Son noyau 3-Layer Core™ combine une mousse à grille hyperélastique, un cœur haute densité et une mousse viscoélastique, sur 30 cm d’épaisseur, avec des zones de couchage indépendantes.',
-    ],
-    features: [
-      'Vibromassage (8 points de massage)',
-      'Traitement UV Clean antibactérien et antiviral',
-      'Noyau 3 couches, 30 cm',
-      'Zones de couchage indépendantes',
-    ],
-    specs: [
-      { label: 'Tailles', value: PRO_SIZES },
-      { label: 'Composition', value: 'Viscoélastique 50 kg/m³ (3 cm) · Supersoft 32 kg/m³ (5 cm) · Mousse HR 37 kg/m³ (13 cm) · Base 3D antidérapante' },
-    ],
-  },
-  {
-    slug: 'matelas-protec',
-    name: 'Matelas Protec',
-    category: 'matelas',
-    summary: 'Hygiène avancée UV Clean et noyau 3 couches. Série Pro.',
-    description: [
-      'Le matelas Protec est conçu pour un sommeil sain, confortable et sûr. Il associe des matériaux de grande qualité à une technologie de protection hygiénique avancée.',
-      'Exposé à la lumière naturelle, son tissu traité par photocatalyse s’active et élimine bactéries, virus et champignons, pour un matelas assaini en continu.',
-    ],
-    features: ['Traitement UV Clean', 'Noyau 3 couches', 'Housse intérieure de protection'],
-    specs: [
-      { label: 'Tailles', value: PRO_SIZES },
-      { label: 'Composition', value: 'Supersoft 32 kg/m³ (5 cm) · Mousse HR 28 kg/m³ (15 cm) · Bloc profilé HR 25 kg/m³ (4 cm) · Base 3D antidérapante' },
-    ],
-  },
-  {
-    slug: 'matelas-ritz',
-    name: 'Matelas Ritz',
-    category: 'matelas',
-    summary: 'Le matelas de la collection hôtelière.',
-    description: [
-      'Développé selon les exigences de l’hôtellerie de luxe, le matelas Ritz allie confort, durabilité et raffinement. Sa structure renforcée assure un soutien uniforme, ses couches de confort une grande douceur.',
-      'Pensé pour un usage intensif, il est habillé d’un tissu raffiné, doux au toucher.',
-    ],
-    features: ['1 200 ressorts ensachés emboîtés', 'Accueil viscoélastique', 'Collection hôtelière'],
-    specs: [
-      { label: 'Tailles', value: MATTRESS_SIZES },
-      { label: 'Composition', value: 'Stretch 380 g/m² · Supersoft (2 cm) · Viscoélastique 50 kg/m³ (3 cm) · Mousse HR (4 cm) · Ressorts ensachés 17 cm' },
-    ],
-  },
-  {
-    slug: 'matelas-medic',
-    name: 'Matelas Medic',
-    category: 'matelas',
-    summary: 'Soutien ferme et ergonomique pour le dos.',
-    description: [
-      'Le matelas Medic est conçu pour ceux qui privilégient la santé et le bien-être au quotidien. Sa structure ferme et ergonomique soutient la colonne vertébrale, aide à garder un bon alignement et à prévenir les douleurs musculaires et lombaires.',
-    ],
-    features: ['Ressorts continus renforcés (15 cm)', 'Plaques de feutre', 'Soutien ferme'],
-    specs: [{ label: 'Tailles', value: MATTRESS_SIZES }],
-  },
-  {
-    slug: 'matelas-tourmaline',
-    name: 'Matelas Tourmaline',
-    category: 'matelas',
-    summary: 'Traitement aux particules de tourmaline.',
-    description: [
-      'Le matelas Tourmaline est conçu pour un repos profond et revigorant, grâce à la tourmaline, minéral reconnu pour ses propriétés énergisantes.',
-      'Son traitement exclusif agit au contact du corps, stimule la microcirculation et aide à réduire le stress et la fatigue accumulée.',
-    ],
-    features: ['Traitement à la tourmaline', 'Sommeil réparateur'],
-    specs: [{ label: 'Tailles', value: PRO_SIZES }],
-  },
-  {
-    slug: 'matelas-bionatura',
-    name: 'Matelas Bionatura',
-    category: 'matelas',
-    summary: 'Fibres naturelles, frais et respirant.',
-    description: [
-      'Le matelas Bionatura s’adresse à ceux qui recherchent un repos naturel, équilibré et durable. Ses fibres naturelles soigneusement sélectionnées offrent fraîcheur, douceur et respirabilité.',
-      'Ses couches écologiques assurent une ventilation constante, régulent l’humidité et préviennent les allergies.',
-    ],
-    features: ['Fibres naturelles', '830 ressorts ensachés (20 cm)', 'Accueil viscoélastique'],
-    specs: [{ label: 'Tailles', value: MATTRESS_SIZES }],
-  },
-  {
-    slug: 'matelas-premium',
-    name: 'Matelas Premium',
-    category: 'matelas',
-    summary: 'Ressorts ensachés et mémoire de forme.',
-    description: [
-      'Le matelas Premium allie matériaux de grande qualité et technologie de confort avancée. Sa composition équilibrée assure soutien, durabilité et bien-être toute la nuit.',
-    ],
-    features: ['780 ressorts ensachés (160×200)', 'Mousse à mémoire de forme', 'Mousse haute densité'],
-    specs: [{ label: 'Tailles', value: MATTRESS_SIZES }],
-  },
-  {
-    slug: 'matelas-elegance',
-    name: 'Matelas Élégance',
-    category: 'matelas',
-    summary: 'Ressorts ensachés 5 zones et mémoire de forme.',
-    description: [
-      'Le matelas Élégance est créé pour ceux qui exigent le meilleur en confort et en qualité de sommeil. Ses ressorts ensachés indépendants offrent un soutien personnalisé et une totale liberté de mouvement.',
-      'Sa couche de mémoire de forme haute densité enveloppe le corps et soulage les points de pression.',
-    ],
-    features: ['Ressorts ensachés 5 zones', 'Mémoire de forme 50 kg/m³', 'Indépendance de couchage'],
-    specs: [{ label: 'Tailles', value: '90×190 · 140×190 · 140×200 · 160×200 · 180×200 · 200×200 cm' }],
-  },
-  {
-    slug: 'matelas-majestic',
-    name: 'Matelas Majestic',
-    category: 'matelas',
-    summary: 'Luxe, innovation et bien-être.',
-    description: [
-      'Le matelas Majestic représente l’équilibre entre luxe, innovation et bien-être. Il associe matériaux de grande qualité, finitions soignées et technologies de confort avancées.',
-    ],
-    features: ['Ressorts ensachés', 'Mémoire de forme 50 kg/m³ (3 cm)', 'Tissu stretch 380 g/m²'],
-    specs: [{ label: 'Tailles', value: '90×190 · 140×190 · 140×200 · 160×200 · 180×200 · 200×200 cm' }],
-  },
-  {
-    slug: 'matelas-max-confort',
-    name: 'Matelas Max Confort',
-    category: 'matelas',
-    summary: 'Surmatelas intégré, viscogel.',
-    description: [
-      'Le matelas Max Confort est conçu pour un repos optimal. Son surmatelas intégré et sa conception adaptée à chaque morphologie allient douceur, soutien et ergonomie.',
-    ],
-    features: ['Surmatelas intégré', 'Accueil viscogel', '830 ressorts ensachés (20 cm)'],
-    specs: [{ label: 'Tailles', value: MATTRESS_SIZES }],
-  },
-
-  // Oreillers
-  {
-    slug: 'oreiller-pro-s',
-    name: 'Oreiller Pro S',
-    category: 'oreillers',
-    summary: 'Technologie UV Clean, mousse viscoélastique.',
-    description: [
-      'L’oreiller Pro S incarne une nouvelle génération de confort et de protection. Sa technologie UV Clean s’active à la lumière du jour et élimine bactéries et micro-organismes, sans produits chimiques ni lavages fréquents.',
-    ],
-    features: ['Traitement UV Clean', 'Hypoallergénique', 'Thermorégulation'],
-    specs: [
-      { label: 'Dimensions', value: '60 × 40 cm' },
-      { label: 'Garnissage', value: '100 % mousse viscoélastique' },
-    ],
-  },
-  {
-    slug: 'oreiller-protec',
-    name: 'Oreiller Protec',
-    category: 'oreillers',
-    summary: 'Hygiène avancée et confort supérieur.',
-    description: [
-      'L’oreiller Protec allie confort supérieur et hygiène avancée. Son traitement UV Clean s’active à la lumière du jour et élimine bactéries, virus et champignons.',
-    ],
-    features: ['Traitement UV Clean', 'Hypoallergénique', 'Effet rafraîchissant'],
-    specs: [
-      { label: 'Dimensions', value: '60 × 40 cm' },
-      { label: 'Garnissage', value: '100 % mousse viscoélastique' },
-    ],
-  },
-  {
-    slug: 'oreiller-cooling',
-    name: 'Oreiller Cooling',
-    category: 'oreillers',
-    summary: 'Mémoire de forme et gel rafraîchissant.',
-    description: [
-      'Le Cooling associe la mousse à mémoire de forme à la fraîcheur du visco-gel, pour des nuits plus fraîches. Le gel thermorégulateur dissipe la chaleur et maintient une température stable.',
-      'Sa structure épouse la nuque et la tête pour un bon alignement cervical, et réagit instantanément aux mouvements.',
-    ],
-    features: ['Gel thermorégulateur', 'Mémoire de forme', 'Hypoallergénique'],
-    specs: [{ label: 'Dimensions', value: '60 × 40 cm' }],
-  },
-  {
-    slug: 'oreiller-ergonomique',
-    name: 'Oreiller ergonomique',
-    category: 'oreillers',
-    summary: 'Forme ergonomique pour l’alignement cervical.',
-    description: [
-      'L’oreiller ergonomique équilibre confort et soutien en épousant les courbes de la nuque et de la tête. Il favorise l’alignement cervical et prévient les tensions musculaires.',
-    ],
-    features: ['Fibre polyester 100 % recyclée', 'Lavable en machine', 'Idéal pour dormir sur le côté'],
-    specs: [
-      { label: 'Dimensions', value: '70 × 40 cm' },
-      { label: 'Tailles', value: 'Petit · Moyen · Grand' },
-    ],
-  },
-  {
-    slug: 'oreiller-ritz',
-    name: 'Oreiller Ritz',
-    category: 'oreillers',
-    summary: 'Duvet d’oie, standards hôteliers.',
-    description: [
-      'Confort et raffinement se rencontrent dans cet oreiller conçu pour les standards hôteliers. Garni de duvet d’oie de grande qualité, il offre douceur et soutien équilibré.',
-      'Son enveloppe en coton 200 fils est douce au toucher et pensée pour un usage intensif.',
-    ],
-    features: ['100 % duvet d’oie', 'Coton 200 fils', 'Collection hôtelière'],
-    specs: [
-      { label: 'Dimensions', value: '70 × 50 cm' },
-      { label: 'Coloris', value: 'Blanc · Violet' },
-    ],
-  },
-
-  // Lits articulés
-  {
-    slug: 'lit-zurich',
-    name: 'Lit Zurich',
-    category: 'lits',
-    summary: 'Sommier articulé cinq plans, double moteur.',
-    description: [
-      'Lit articulé à structure renforcée, très résistant et facile d’entretien. Ses plans d’articulation supportent le poids même lorsque le relève-pieds est levé.',
-      'Ses lattes en hêtre naturel, montées sur doubles supports oscillants, s’adaptent à chaque morphologie.',
-    ],
-    features: ['Cinq plans articulés', 'Double moteur, télécommande sans fil', 'Lattes en hêtre', 'Cadre en tube d’acier'],
-    specs: [{ label: 'Tailles', value: '70×190 · 70×200 · 80×200 · 90×200 cm' }],
-  },
-  {
-    slug: 'lit-omega',
-    name: 'Lit Omega',
-    category: 'lits',
-    summary: 'Lit articulé en bois massif.',
-    description: [
-      'Lit articulé à structure en bois massif, très résistant et facile d’entretien. Son sommier renforcé et ses plans d’articulation supportent le poids même relève-pieds levé.',
-    ],
-    features: ['Bois massif', 'Sommier renforcé', 'Hauteur 34 cm'],
-    specs: [
-      { label: 'Tailles', value: '70×190 · 70×200 · 80×200 · 90×200 cm' },
-      { label: 'Finition', value: 'Cambrian' },
-    ],
-  },
-
-  // Massage
-  {
-    slug: 'fauteuil-easy',
-    name: 'Fauteuil de massage Easy',
-    category: 'massage',
-    summary: 'Gravité zéro, chauffage lombaire et enceintes Bluetooth.',
-    description: [
-      'Le fauteuil Easy transforme la détente en une expérience de confort et de technologie. Son chauffage procure une relaxation enveloppante et ses enceintes Bluetooth diffusent votre musique.',
-      'La commande vocale le rend intuitif, et la position gravité zéro soulage la colonne vertébrale.',
-    ],
-    features: ['Gravité zéro', 'Chauffage lombaire', 'Enceintes Bluetooth', 'Commande vocale', 'Fonction étirement', 'Airbags hanches, mollets et pieds'],
-  },
-  {
-    slug: 'fauteuil-gravity',
-    name: 'Fauteuil de massage Gravity',
-    category: 'massage',
-    summary: 'Body scan intelligent et technologie airbag.',
-    description: [
-      'Un fauteuil de luxe au massage personnalisable : son body scan intelligent ajuste le massage aux points de pression et aux groupes musculaires de chacun.',
-      'Ses airbags favorisent la circulation et soulagent les raideurs, et la position gravité zéro procure une relaxation profonde.',
-    ],
-    features: ['Body scan intelligent', 'Technologie airbag', 'Gravité zéro'],
-  },
-  {
-    slug: 'masseur-pieds',
-    name: 'Masseur jambes et pieds',
-    category: 'massage',
-    summary: 'Massage 3D des pieds, mollets et genoux, chauffant.',
-    description: [
-      'Ce masseur offre un massage 3D des jambes, des mollets, des pieds et des genoux. Il dispose d’une fonction chauffante, de trois vitesses et d’un programme prédéfini, réglables depuis la télécommande intégrée.',
-    ],
-    features: ['Massage 3D', 'Chauffage en fibre de carbone', 'Module genoux pivotant à 110°', 'Trois vitesses'],
-  },
-  {
-    slug: 'masseur-yeux-irest',
-    name: 'Masseur oculaire iRest',
-    category: 'massage',
-    summary: 'Vibrations, chaleur et sons de la nature.',
-    description: [
-      'Le masseur oculaire iRest combine vibrations douces, airbags et chaleur apaisante pour reposer les yeux fatigués et soulager les tensions.',
-      'Son haut-parleur diffuse des sons de la nature, ou votre propre musique.',
-    ],
-    features: ['Massage par vibrations et airbags', 'Thermothérapie', 'Musicothérapie'],
-  },
-
-  // Entretien
-  {
-    slug: 'spray-protecteur',
-    name: 'Protect Spray',
-    category: 'entretien',
-    summary: 'Protège les tissus et élimine les acariens.',
-    description: [
-      'Protect Spray crée une barrière invisible et respirante qui repousse l’eau, la graisse et les taches, sans altérer la couleur ni la texture du tissu. Il élimine aussi les acariens.',
-      'Idéal pour canapés, chaises, rideaux et intérieurs de voiture, notamment avec des enfants ou des animaux.',
-    ],
-  },
-  {
-    slug: 'spray-nettoyant',
-    name: 'Clean Spray',
-    category: 'entretien',
-    summary: 'Détachant pour tous les tissus, sans rinçage.',
-    description: [
-      'Clean Spray élimine tout type de tache sur les tissus, rapidement et sans les abîmer ni altérer leurs couleurs. Pour canapés, rideaux, sièges de voiture et autres tissus.',
-    ],
-    features: ['Élimine les taches tenaces', 'Sans danger pour tous les tissus', 'Sans rinçage'],
-  },
+const FACTS = [
+  { value: 'Près de 20 ans', label: 'de fabrication au Portugal' },
+  { value: '260 000', label: 'cycles testés par mécanisme' },
+  { value: '5 ans', label: 'de garantie sur le mécanisme breveté' },
 ];
 
-// ---------------------------------------------------------------------------
-// Belgique — fauteuils massants
-// ---------------------------------------------------------------------------
+const CATEGORIES: Record<string, Category> = {
+  angles: { slug: 'angles', title: 'Canapés d’angle', intro: 'De la place pour toute la famille.' },
+  meridiennes: { slug: 'meridiennes', title: 'Canapés avec méridienne', intro: 'S’allonger sans quitter le salon.' },
+  canapes: { slug: 'canapes', title: 'Canapés et ensembles', intro: 'Canapés seuls et ensembles 3 + 2.' },
+  fauteuils: { slug: 'fauteuils', title: 'Fauteuils', intro: 'Relax, pivotants, releveurs.' },
+  entretien: { slug: 'entretien', title: 'Entretien', intro: 'Pour garder vos tissus comme neufs.' },
+};
 
-const BELGIQUE: Product[] = [
-  {
-    slug: 'sunshine',
-    cover: 3,
-    name: 'Sunshine',
-    category: 'fauteuils-massants',
-    summary: '20 programmes automatiques, massage 4D et intelligence artificielle.',
-    description: [
-      'Le Sunshine propose 20 programmes automatiques répartis en quatre familles : massage famille, relaxation active, programmes I.A et relaxation totale.',
-      'Son mécanisme 4D à huit rouleaux, sur double rail SL de 120 cm, suit les courbes du corps de la nuque aux jambes. L’intelligence artificielle adapte l’intensité et les techniques à la morphologie et à l’état des muscles.',
-    ],
-    features: [
-      'Massage 4D, 8 rouleaux',
-      'Rail SL de 120 cm',
-      'Programmes I.A',
-      'Airbags sur tout le corps, 5 niveaux',
-      'Gravité zéro (153° à 163°)',
-      'Commande vocale et écran tactile',
-    ],
-    specs: [
-      { label: 'Coloris', value: 'Noir · Champagne' },
-      { label: 'Poids', value: '116,5 kg' },
-      { label: 'Alimentation', value: '220 V · 150 W' },
-    ],
-  },
-  {
-    slug: 'samourai',
-    cover: 6,
-    name: 'Samouraï',
-    category: 'fauteuils-massants',
-    summary: 'Massage automatique, Bluetooth, charge sans fil et 16 airbags.',
-    description: [
-      'Le Samouraï lance d’une simple touche un massage complet, de la nuque aux jambes : pétrissage, massage et tapotement s’enchaînent selon les principes de l’ergonomie.',
-      'Il est pensé pour la vie de tous les jours : support de téléphone, musique Bluetooth, raccourcis, port USB et charge sans fil.',
-    ],
-    features: ['16 airbags', 'Rail SL de 120 cm', 'Écran LCD', 'Musique Bluetooth', 'Charge sans fil et USB'],
-    specs: [
-      { label: 'Dimensions', value: '140 × 72 × 104 cm' },
-      { label: 'Largeur d’assise', value: '53 cm' },
-      { label: 'Coloris', value: 'Blanc · Bleu · Bois' },
-      { label: 'Poids', value: '67 kg' },
-    ],
-  },
-  {
-    slug: 'parme',
-    cover: 3,
-    name: 'Parme',
-    category: 'fauteuils-massants',
-    summary: 'Gravité zéro, body scan et mains robotiques 4D.',
-    description: [
-      'Le Parme offre un massage complet du corps en position d’apesanteur. Son body scan détecte votre taille et aligne précisément les rouleaux.',
-      'Son rail SL de 139 cm couvre de la nuque aux cuisses, et ses mains robotiques 4D reproduisent les gestes d’un thérapeute. Un écran tactile de 10,1 pouces donne accès à 48 programmes personnalisables.',
-    ],
-    features: [
-      'Mains robotiques 4D',
-      'Rail SL+ de 139 cm',
-      'Body scan',
-      'Écran tactile 10,1″',
-      'Détection des signes vitaux',
-      'Fonction mémoire',
-    ],
-    specs: [
-      { label: 'Dimensions', value: '165 × 78 × 115 cm' },
-      { label: 'Revêtement', value: 'Similicuir' },
-      { label: 'Coloris', value: 'Bleu · Camel · Vert' },
-      { label: 'Poids', value: '110 kg' },
-    ],
-  },
-  {
-    slug: 'venise',
-    cover: 4,
-    name: 'Venise',
-    category: 'fauteuils-massants',
-    summary: 'Massage de la tête aux pieds, 7 programmes, audio Bluetooth.',
-    description: [
-      'Le Venise masse de la tête aux pieds. Il associe 7 programmes automatiques, de la détente à la récupération sportive, et 6 techniques manuelles : pétrissage, tapotement, shiatsu…',
-      'Laissez-vous guider ou composez votre massage sur mesure. Option massage 3D.',
-    ],
-    features: ['7 programmes automatiques', '6 techniques manuelles', 'Audio Bluetooth', 'Repose-pieds extensible', 'Port USB'],
-    specs: [
-      { label: 'Coloris', value: 'Gris · Noir' },
-      { label: 'Alimentation', value: '220 V · 100 W' },
-    ],
-  },
-];
+function catalogue(c: Omit<Catalogue, 'categories' | 'products' | 'facts' | 'frame'> & { categories: string[] }): Catalogue {
+  return {
+    ...c,
+    facts: FACTS,
+    frame: { ratio: '4 / 3', fit: 'cover' },
+    categories: c.categories.map((k) => CATEGORIES[k]),
+    products: PRODUCTS.filter((p) => c.categories.includes(p.category)),
+  };
+}
 
-// ---------------------------------------------------------------------------
-
-export const COUNTRIES: Country[] = [
-  {
-    slug: 'portugal',
-    name: 'Portugal',
-    code: 'PT',
-    specialty: 'Canapés et fauteuils relax',
-    tagline: 'L’art de la détente.',
+export const CATALOGUES: Catalogue[] = [
+  catalogue({
+    slug: '1',
+    name: 'Catalogue 1',
+    code: '01',
+    specialty: 'Canapés d’angle et méridiennes',
+    tagline: 'De la place pour s’étendre.',
     intro: [
-      'Fabriqués au Portugal par des artisans du canapé depuis près de vingt ans, ces modèles réunissent beauté, qualité et confort.',
-      'Chaque collection suit les tendances et l’innovation, du choix des cuirs et des tissus jusqu’aux mécanismes relax, testés pour durer.',
-    ],
-    facts: [
-      { value: 'Près de 20 ans', label: 'de fabrication au Portugal' },
-      { value: '260 000', label: 'cycles testés par mécanisme' },
-      { value: '5 ans', label: 'de garantie sur le mécanisme breveté' },
+      'Les grands formats : canapés d’angle et canapés avec méridienne, pour recevoir ou s’allonger en famille.',
+      'Relax électriques, têtières réglables, assises coulissantes : chaque modèle s’adapte à votre façon de vous détendre.',
     ],
     visual: { product: 'meridienne-51698', index: 1, position: '38% 60%' },
-    frame: { ratio: '4 / 3', fit: 'cover' },
-    categories: [
-      { slug: 'angles', title: 'Canapés d’angle', intro: 'De la place pour toute la famille.' },
-      { slug: 'meridiennes', title: 'Canapés avec méridienne', intro: 'S’allonger sans quitter le salon.' },
-      { slug: 'canapes', title: 'Canapés et ensembles', intro: 'Canapés seuls et ensembles 3 + 2.' },
-      { slug: 'fauteuils', title: 'Fauteuils', intro: 'Relax, pivotants, releveurs.' },
-      { slug: 'entretien', title: 'Entretien', intro: 'Pour garder vos tissus comme neufs.' },
-    ],
-    products: PORTUGAL,
-  },
-  {
-    slug: 'suisse',
-    name: 'Suisse',
-    code: 'CH',
-    specialty: 'Literie et massage',
-    tagline: 'Le sommeil, avec la précision suisse.',
+    categories: ['angles', 'meridiennes'],
+  }),
+  catalogue({
+    slug: '2',
+    name: 'Catalogue 2',
+    code: '02',
+    specialty: 'Canapés et ensembles',
+    tagline: 'Le salon, en toute harmonie.',
     intro: [
-      'Matelas, oreillers et lits articulés conçus en Suisse, qui allient technologie, ergonomie et matériaux de pointe.',
-      'La Série Pro favorise la récupération musculaire et un sommeil profond ; la collection hôtelière répond aux exigences des plus beaux établissements.',
+      'Canapés seuls et ensembles 3 + 2 assortis, pour composer un salon cohérent.',
+      'Relax manuels ou électriques, tissus anti-taches ou adaptés aux animaux : des modèles pensés pour le quotidien.',
     ],
-    facts: [
-      { value: 'UV Clean', label: 'tissus assainis à la lumière du jour' },
-      { value: 'Série Pro', label: 'vibromassage et récupération' },
-      { value: 'Hôtellerie', label: 'une collection pour le luxe' },
-    ],
-    visual: { product: 'lit-omega', index: 1, position: '42% 60%' },
-    frame: { ratio: '1 / 1', fit: 'contain' },
-    categories: [
-      { slug: 'matelas', title: 'Matelas', intro: 'Ressorts ensachés, mousses techniques, Série Pro.' },
-      { slug: 'oreillers', title: 'Oreillers', intro: 'Soutien cervical et fraîcheur.' },
-      { slug: 'lits', title: 'Lits articulés', intro: 'Plans réglables et double moteur.' },
-      { slug: 'massage', title: 'Massage', intro: 'Fauteuils et appareils de massage.' },
-      { slug: 'entretien', title: 'Entretien', intro: 'Protéger et nettoyer les tissus.' },
-    ],
-    products: SUISSE,
-  },
-  {
-    slug: 'belgique',
-    name: 'Belgique',
-    code: 'BE',
-    specialty: 'Fauteuils massants',
-    tagline: 'Le massage, comme un rituel.',
+    visual: { product: 'canape-cloud', index: 1, position: '45% 60%' },
+    categories: ['canapes'],
+  }),
+  catalogue({
+    slug: '3',
+    name: 'Catalogue 3',
+    code: '03',
+    specialty: 'Fauteuils et entretien',
+    tagline: 'Votre coin à vous.',
     intro: [
-      'Sélectionnés par des spécialistes belges du bien-être, ces fauteuils massants haut de gamme se distinguent par leur technologie et leur design.',
-      'Body scan, gravité zéro, massage 4D : chaque fauteuil adapte le rythme et l’intensité du massage à votre corps.',
+      'Fauteuils relax, pivotants ou releveurs, pour le coin lecture ou télé.',
+      'Et les produits d’entretien pour garder vos tissus comme neufs.',
     ],
-    facts: [
-      { value: '4D', label: 'massage robotisé' },
-      { value: 'Gravité zéro', label: 'pour une détente profonde' },
-      { value: 'Body scan', label: 'adapté à votre morphologie' },
-    ],
-    visual: { product: 'samourai', index: 6, position: '50% 60%' },
-    frame: { ratio: '4 / 5', fit: 'cover' },
-    categories: [{ slug: 'fauteuils-massants', title: 'Fauteuils massants', intro: 'Quatre modèles, du compact au haut de gamme.' }],
-    products: BELGIQUE,
-  },
+    visual: { product: 'fauteuil-55189', index: 1, position: '50% 60%' },
+    categories: ['fauteuils', 'entretien'],
+  }),
 ];
 
 // ---------------------------------------------------------------------------
@@ -1090,33 +685,33 @@ function image(key: string, i: number, [width, height]: [number, number]): Produ
 }
 
 /** Photos du produit, la photo de couverture en premier. */
-export function productImages(country: Country, product: Product): ProductImage[] {
-  const key = `${country.slug}/${product.slug}`;
+export function productImages(product: Product): ProductImage[] {
+  const key = `produits/${product.slug}`;
   const list = (MANIFEST[key] ?? []).map((size, i) => image(key, i, size));
   const first = (product.cover ?? 1) - 1;
   return first > 0 && first < list.length ? [list[first], ...list.filter((_, i) => i !== first)] : list;
 }
 
-export function countryVisual(country: Country): ProductImage {
-  const { product, index } = country.visual;
-  const key = `${country.slug}/${product}`;
+export function catalogueVisual(catalogue: Catalogue): ProductImage {
+  const { product, index } = catalogue.visual;
+  const key = `produits/${product}`;
   return image(key, index - 1, MANIFEST[key][index - 1]);
 }
 
-export function getCountry(slug: string) {
-  return COUNTRIES.find((c) => c.slug === slug);
+export function getCatalogue(slug: string) {
+  return CATALOGUES.find((c) => c.slug === slug);
 }
 
-export function getProduct(countrySlug: string, productSlug: string) {
-  const country = getCountry(countrySlug);
-  const product = country?.products.find((p) => p.slug === productSlug);
-  return country && product ? { country, product } : undefined;
+export function getProduct(catalogueSlug: string, productSlug: string) {
+  const catalogue = getCatalogue(catalogueSlug);
+  const product = catalogue?.products.find((p) => p.slug === productSlug);
+  return catalogue && product ? { catalogue, product } : undefined;
 }
 
-export function productsByCategory(country: Country) {
-  return country.categories
-    .map((category) => ({ category, products: country.products.filter((p) => p.category === category.slug) }))
+export function productsByCategory(catalogue: Catalogue) {
+  return catalogue.categories
+    .map((category) => ({ category, products: catalogue.products.filter((p) => p.category === category.slug) }))
     .filter((g) => g.products.length > 0);
 }
 
-export const PRODUCT_COUNT = COUNTRIES.reduce((n, c) => n + c.products.length, 0);
+export const PRODUCT_COUNT = CATALOGUES.reduce((n, c) => n + c.products.length, 0);
